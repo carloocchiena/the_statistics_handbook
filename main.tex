@@ -274,8 +274,6 @@ It's the simplest and most common type of  average, expressed as the sum of all 
 \textbf{Weighted Mean}
 It's similar to the arithmetic mean, except the fact that each of the data point contributes to the computation with its own weight factor.
 
-$ \displaystyle \mu(x) = \frac{\sum \limits ^{k} _{i=1} x_i * n_i}{N}$
-
 For example, let's calculate the average weight of an apple, given that you have many apples with different weight clusters.
 
 \begin{center}
@@ -367,79 +365,6 @@ Standard Deviation & $\displaystyle \sigma = \sqrt{\sigma^2}$ & $\displaystyle s
 \hline
 \end{tabular}
 \end{center}
-
-\paragraph{Bessel's Correction}\mbox{} \\ 
-\mbox{} \\
-
-Why does sample variance have n-1 as denominator?
-
-That’s a good question, that leads to a non-trivial answer. 
-
-From a mathematical point of view, the -1 correction factor is called Bessel’s correction and it’s used to correct the tendency (that can be demonstrate mathematically or even empirically with a relatively small number of experiment over a dataset) that the biased estimator has a tendency to undershoot (and never to overshoot) the parameter being estimated.  
-
-It is possible to think of the Bessel correction as the degrees of freedom of the vector of residuals. When the sample standard deviation is calculated from a sample of n values, sample mean is used which has already been calculated from that same sample of n values. The calculated sample mean has already taken into account one of the degrees of freedom of variability (which is the mean itself) that is available in the sample.
-
-Let's approach the topic with an example: we have a table with 10 dice rolls; we know the result of each die, the overall average of the dataset.
-How many elements can we make unknown in our dataset, without altering the goodness of the information we have?
-Only one. By eliminating the result of one die roll, we are still able to reconstruct it through the mean of the experiment and the remaining values.
-But by eliminating more than one value, we are forced to add approximation, thus invalidating the info we possess.
-This is why we can link Bessel correction to degrees of freedom. 
-
-\subsubsection{Quartiles and IQR}
-In statistics, a quartile is a type of quantile which divides the number of data points into four parts, or quarters, of more-or-less equal size. The data must be ordered from smallest to largest to compute quartiles; as such, quartiles are a form of order statistic. 
-
-\textbf{Quartiles:}
-\begin{itemize}
-    \item Quartile zero (Q0) corresponds to the first value of the ordered dataset.
-    \item The first quartile (Q1) is defined as the middle number between the smallest number (minimum) and the median of the data set. It is also known as the lower or 25th empirical quartile, as 25\% of the data is below this point.
-    \item The second quartile (Q2) is the median of a data set; thus 50\% of the data lies below this point.
-    \item The third quartile (Q3) is the middle value between the median and the highest value (maximum) of the data set. It is known as the upper or 75th empirical quartile, as 75\% of the data lies below this point.
-    \item Quartile four (Q4) corresponds to the last value of the ordered dataset.
-\end{itemize}
-
-\textbf{IQR - Interquartile Range:}
-IQR is a measure of statistical dispersion and it is defined as the difference between Q3 and Q1.
-
-As an example, having an ordered dataset as following:\\
-Dataset = 1, 2, 3, 5, 8, 8, 9, 10, 15\\
-Q0: 1\\
-Q1: (2 + 3) / 2 = 2.5 (median of first half; 25th percentile).\\
-Q2: 8 (median; 50th percentile).\\
-Q3: (9+10)  /2 = 9.5 (median of second half;75th percentile).\\
-Q4: 15\\
-
-Range = Q4 - Q0 = 15 - 1 = 14
-
-IQR = Q3 - Q1 = 9.5 - 2.5 = 7
-
-\clearpage
-\section{Data Visualization}
-Data visualization (data viz) is the graphical representation of data. 
-The main goal of data visualization are to make the phenomena within the dataset more evident, convey the embedded information in the analysis more efficiently, and reinforce cognitive aspects of the provided study (e.g., ease of reporting, memorability).
-
-While data visualization pertains to the field of science and statistics, data viz has also taken on cross-cutting significance in purely artistic or design-related contexts.
-
-Data visualization  is so relevant that it could be considered a discipline within a discipline, with a deep vertical of study and insight that spans mathematical, scientific, statistical, cognitive, and humanistic domains. 
-
-The recent spread of data science has made data viz even more important.
-
-However, this paper will be limited to exploring some of the best-known forms of graphical representation in the field of statistics, and some of their properties.
-
-\subsection{Scatter Plot}
-A scatter plot is a type of plot or mathematical diagram using Cartesian coordinates to display values for typically two variables for a set of data. Every data point is displayed as a dot.
-
-Scatter plot has its most significance with continouos distributions. 
-
-\includegraphics[width=3cm, height=3cm]{plot_chart}
-
-\subsection{Line Chart}
-Line charts show the evolution of a continuous variable (often over a time horizon).
-A line chart is a way of plotting data points on a line. 
-It is used to show trend data, or the comparison of two data sets.
-
-\includegraphics[width=3cm, height=3cm]{line_chart}
-
-
 
 
 \end{document}
