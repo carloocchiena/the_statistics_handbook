@@ -6,15 +6,18 @@
 
 % PACKAGES
 \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
 \usepackage{amsmath} % provides many mathematical environments & tools
 \usepackage{amssymb} % to display \varnothing symbol
 \usepackage{array} % to manage table alignment
-\usepackage{changepage} % dinamically change a page layout
+\usepackage{changepage} % dynamically change a page layout
 \usepackage{geometry} % to manage dynamic page layout
 \usepackage{graphicx} % to handle images
 \usepackage{makecell} % to manage multiline cells
 \usepackage[document]{ragged2e} %% to manage text alignment
 \usepackage{parskip} % to manage paragraph spacing
+\usepackage{fancyhdr} % to manage page header and footer
+
 % this has to be the last package ever  
 \usepackage{hyperref} % clickable URLs
 
@@ -25,7 +28,7 @@
 
 % FUNCTIONS 
 
-
+% DOCUMENT CUSTOMIZATION
 \title{The Statistics Handbook \\ 
     \normalsize Version 0.1}
 \author{ Carlo Occhiena }
@@ -33,6 +36,12 @@
 
 
 \begin{document}
+
+% CUSTOM HEADER
+\fancyhead{}
+\setlength{\headheight}{13.6pt}
+\pagestyle{fancy}
+\rhead[]{\rightmark} % section name
 
 \maketitle
 % \centerline \LaTeX{}
@@ -738,7 +747,7 @@ The law of large numbers, or Bernoulli's theorem (since its first formulation is
 \subsubsection{Probability Addition Rule}
 If A and B are two events in a probability experiment, then the probability that either one of the events will occur is: \\ 
 \mbox{} \\
-$P(A or B)=P(A)+P(B)−P(A and B)$ \\ 
+P(A or B) = P(A)+P(B) − P(A and B) \\ 
 \mbox{} \\
 Or, with sets notation as: \\ 
 \mbox{} \\
@@ -776,7 +785,7 @@ The probability of A and B happening. \\
 \mbox{} \\
 $P(A \cap B) = P(A) * P(B)$ \\ 
 \mbox{} \\
-Tossing two coins A and B, what is the probability of having two head values? \\ 
+Tossing two coins $A$ and $B$, what is the probability of having two head values? \\ 
 Coins are independent each other, so: \\ 
 \mbox{} \\
 $P(A \cap B) = 1 / 2 * 1 / 2 = 1 / 4 $ \\ 
@@ -784,7 +793,7 @@ $P(A \cap B) = 1 / 2 * 1 / 2 = 1 / 4 $ \\
 Defective rate in a production line is 2\%. \\ 
 What is the probability of having 3 defective products in a row?\\
 \mbox{} \\
-$P(A \cap B \cap  C) = 2 / 100 * 2 / 100 * 2 / 100 = \frac{8}{100^3} = 1 / 125'000$ \\ 
+$P(A \cap B \cap  C) = 2 / 100 * 2 / 100 * 2 / 100 = \frac{8}{100^3} = 1 / \text{125'000}$ \\ 
 \mbox{} \\
 \textbf{Dependent event probability}
 \mbox{} \\
@@ -846,8 +855,8 @@ You are tested positive. \\
 What is the change you actually have the disease? \\ 
 \mbox{} \\
 \begin{itemize}
-    \item Population: $1'000$
-    \item Incidence: $(1/1’000) = 0.001$
+    \item Population: $\text{1'000}$
+    \item Incidence: $(1/\text{1’000}) = \text{0.001}$
     \item Accuracy: 99\%
     \item False positive \ negative: $(100\% - 99\%) = 1\%$
 \end{itemize}
@@ -865,17 +874,94 @@ TOTAL & 1 & 999 & 1'000 \\
 \hline
 \end{tabular}
 \end{center}
+
 \mbox{} \\  
-{[1]} = $1’000 * 0.001 * 99\%$ \\ 
-{[2]} = $1’000 * 0.001 * 1\%$ \\ 
-{[3]} = $(1’000 * (1 - 0.001)) * 1\%$ \\ 
-{[4]} = $(1’000 * (1 - 0.001)) * 99\%$ \\
+
+{[1]} = $\text{1’000} * 0.001 * 99\%$ \\ 
+{[2]} = $\text{1’000} * 0.001 * 1\%$ \\ 
+{[3]} = $(\text{1’000} * (1 - 0.001)) * 1\%$ \\ 
+{[4]} = $(\text{1’000} * (1 - 0.001)) * 99\%$ \\
+
 \mbox{} \\
+
 $P(A)$ = probability of being sick = $0.001$ \\ 
-$P(B)$ = probability of having a positive test = $10.98 / 1’000$ \\ 
+$P(B)$ = probability of having a positive test = $10.98 / \text{1’000}$ \\ 
 $P(B|A)$ = probability of having a positive test being sick = $0.99$ \\ 
 $P(A|B)$ = probability of being sick having a positive test = $10.98 / 0.99$ (or applying Bayesian formula) = $9\%$ \\ 
 
+\subsubsection{Tree Diagrams}
+A tree diagram is a type of diagram that can be useful as an aid in computing probabilities. \\ 
+For example, consider an experiment of tossing a six-sided die. Each
+time the experiment is repeated, the probability of obtaining a 1 (event ) is $P(A) = 1 / 6$. 
+If you are only concerned with whether the number is 1 or not 1, and the experiment is repeated three times, then eight different sequences of events are possible. \\ 
+The tree diagram below shows the probabilities of these eight sequences of events.
+
+\includegraphics[width=5cm, height=7cm]{tree_diagram}
+
+\subsection{Discrete Probability}
+Discrete probability deals with events with a finite or countable number of occurrences. \\ 
+This is in contrast to a continuous distribution, where outcomes can fall anywhere on a continuum. 
+
+Common examples of discrete distribution include the binomial, Poisson, and Bernoulli distributions.
+
+\textbf{Example of of discrete probability}
+What is the probability of having head out of 3 coin flips?
+\begin{itemize}
+    \item Number of variable: 2 (head or tail).
+    \item Number of events: 3 flips.
+    \item Total number of combinations: $2^3 = 8$
+\end{itemize}
+
+Possible outcomes: \\ 
+\begin{flushleft}
+\begin{tabular}{|c|c|}
+\hline
+EVENT & N. OF HEADS \\ \hline
+&\\[-1em]
+HHH & 3 \\ \hline
+&\\[-1em]
+THH & 2 \\ \hline
+&\\[-1em]
+HTH & 2 \\ \hline
+&\\[-1em]
+TTH & 1 \\ \hline
+&\\[-1em]
+HHT & 1 \\ \hline
+&\\[-1em]
+THT & 1 \\ \hline
+&\\[-1em]
+HTT & 1 \\ \hline
+&\\[-1em]
+TTT & 0 \\
+\hline
+\end{tabular}
+\end{flushleft}
+
+\begin{flushleft}
+\begin{tabular}{|c|c|}
+\hline
+\makecell {HEADS IN 3 \\ COIN FLIPS (X)} & P(X)\\ \hline
+&\\[-1em]
+0 & 1/8 \\ \hline
+&\\[-1em]
+1 & 3/8 \\ \hline
+&\\[-1em]
+2 & 3/8 \\ \hline
+&\\[-1em]
+3 & 1/8 \\ 
+\hline
+\end{tabular}
+\end{flushleft}
+
+$P(X) = 0 * 1/8 + 1 * 3/8 + 2 * 3/8  + 3 * 1/8 = 12 / 8  = 3 / 2 = 150\%  $ \\ 
+\mbox{}\\
+Mean = $3 / 2$ \\ 
+\mbox{}\\
+Variance = $\sigma^2 = (0 - 3/2)^2 * 1/8 + (1 - 3/2)^2 * 3/8 + (2 - 3/2)^2 * 3/8 + (3 - 3/2)^2 * 1/8 =  0,75$ \\ 
+\mbox{}\\
+Standard Deviation = $\sigma = \sqrt{\sigma^2} = 0.866$ \\ 
+\mbox{}\\
+Note that in practical terms, a rational number is not making sense in a discrete probability calculation (we can’t have half of a coin flip or 1.5 heads as a result. This is a case of theoretical probability vs experimental probability).   
 
 
 \end{document}
