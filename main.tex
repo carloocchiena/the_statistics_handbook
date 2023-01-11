@@ -913,7 +913,7 @@ What is the probability of having head out of 3 coin flips?
 \end{itemize}
 
 Possible outcomes: \\ 
-\begin{flushleft}
+\begin{center}
 \begin{tabular}{|c|c|}
 \hline
 EVENT & N. OF HEADS \\ \hline
@@ -935,9 +935,9 @@ HTT & 1 \\ \hline
 TTT & 0 \\
 \hline
 \end{tabular}
-\end{flushleft}
+\end{center}
 
-\begin{flushleft}
+\begin{center}
 \begin{tabular}{|c|c|}
 \hline
 \makecell {HEADS IN 3 \\ COIN FLIPS (X)} & P(X)\\ \hline
@@ -951,7 +951,7 @@ TTT & 0 \\
 3 & 1/8 \\ 
 \hline
 \end{tabular}
-\end{flushleft}
+\end{center}
 
 $P(X) = 0 * 1/8 + 1 * 3/8 + 2 * 3/8  + 3 * 1/8 = 12 / 8  = 3 / 2 = 150\%  $ \\ 
 \mbox{}\\
@@ -962,6 +962,138 @@ Variance = $\sigma^2 = (0 - 3/2)^2 * 1/8 + (1 - 3/2)^2 * 3/8 + (2 - 3/2)^2 * 3/8
 Standard Deviation = $\sigma = \sqrt{\sigma^2} = 0.866$ \\ 
 \mbox{}\\
 Note that in practical terms, a rational number is not making sense in a discrete probability calculation (we can’t have half of a coin flip or 1.5 heads as a result. This is a case of theoretical probability vs experimental probability).   
+
+\subsubsection{Transforming Random Variables}
+How the distribution of a random variable changes when the variable is transformed in a deterministic way?
+
+\paragraph{Shifting Data}\mbox{} \\
+\mbox{} \\
+Shifthing data means adding a constant $k \in \mathbb{R}$ to each member of a dataset.
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+X & Y\\ \hline
+&\\[-1em]
+3 & 3 + K \\ \hline
+&\\[-1em]
+3 & 3 + K \\ \hline
+&\\[-1em]
+7 & 7 + K \\ \hline
+&\\[-1em]
+10 & 10 + K \\ \hline
+&\\[-1em]
+12 & 12 + K \\ 
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Dataset & Shifted, K\\ \hline
+&\\[-1em]
+Mean: 6 & Mean: 6 + K \\ \hline
+&\\[-1em]
+Median:  & Median: 3 + K \\ \hline
+&\\[-1em]
+Mode: 3 & Mode: 3 + K  \\ \hline
+&\\[-1em]
+Range: 10 & Range: 10 \\ \hline
+&\\[-1em]
+IQR: 8 & IQR: 8 \\ \hline
+&\\[-1em]
+St. Dev: $\sigma$ & St. Dev: $\sigma$ \\ 
+\hline
+\end{tabular}
+\end{center}
+\textbf{Impact of K-shifting:} while mean, median and mode will change of a K-addictive factor, range, IQR and standard deviation will stay the same since in fact the shape (and, more precisely, the distance between each datapoint) will not change.
+
+\includegraphics[width=3cm, height=3cm]{shifted}
+
+\paragraph{Scaling Data}\mbox{} \\
+\mbox{} \\
+Scaling data means multipying each member of a dataset by a constant $k$.
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Dataset & Scaled, K\\ \hline
+&\\[-1em]
+Mean: 6 & Mean: 6K \\ \hline
+&\\[-1em]
+Median:  & Median: 3K \\ \hline
+&\\[-1em]
+Mode: 3 & Mode: 3K  \\ \hline
+&\\[-1em]
+Range: 10 & Range: 10K \\ \hline
+&\\[-1em]
+IQR: 8 & IQR: 8K \\ \hline
+&\\[-1em]
+St. Dev: $\sigma$ & St. Dev: $\sigma$ K \\
+\hline
+\end{tabular}
+\end{center}
+\textbf{Impact of K-scaling:} all the values are impacted by a k-magnitude factor.
+Consider that both assumptions will be valid in a mixed case such as: 
+$N(X) = 10x$ - 2 ($*x$ - 2 applies for mean, median and mode, while only $*x$ applies to standard deviation, IQR and range).
+
+\includegraphics[width=3cm, height=3cm]{scaled}
+
+\subsubsection{Linear Combinations of Random Variables}
+Let $X_1$ and $X_2$ be two independent random variables. Let $a$ and $b$ be scalars. Then a linear combination of the variables $X_1$ and $X_2$ and is defined to be any other random variable of the form $Y= aX_1 + bX_2$. 
+
+Base assumptions:
+\begin{itemize}
+    \item Variables must be independent.
+    \item Variables must have matching units of measurements.
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+ & $\sum$ & $\Delta$  \\ \hline
+&&\\[-1em]
+Combination & $\sum = X + Y $ & $\Delta = X - Y$ \\ \hline
+&&\\[-1em]
+Mean & $\mu = \mu x + \mu y $ & $\mu = \mu x - \mu y$ \\ \hline
+&&\\[-1em]
+Variance & $\sigma^2 = \sigma^2 x + \sigma^2 y$ & $\sigma^2 = \sigma^2 x + \sigma^2 y$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Example:}
+Time in hours 4 managers manage timesheets: \\ 
+X = [1, 2, 2, 3] \\ 
+\mbox{} \\
+Time in hours 4 HRs manages payrolls on such timesheets: \\ 
+Y = [2, 3, 5, 6] \\ 
+\mbox{} \\
+
+$\mu X$ = (1 + 2 + 2 + 3) / 4 = 2 \\
+\mbox{} \\
+$\mu Y$ = (2 + 3 + 5 + 6) / 4 = 4 \\ 
+\mbox{} \\
+$\sigma^2 X$ = $[(1 - 2)^2 + (2 - 2)^2 + (2 - 2)^2 + (3 - 2)^2 ]$ / 4 = 0.5  \\
+\mbox{} \\
+$\sigma X$ =  $\sqrt{0.5}$ = 0.70 \\ 
+\mbox{} \\
+$\sigma^2 Y$ = $[(2 - 4)^2 + (3 - 4)^2 + (5 - 4)^2 + (6 - 4)^2]$ / 4 = 2.5  \\
+\mbox{} \\
+$\sigma Y$ =  $\sqrt{2.5}$ = 1.58 \\
+\mbox{} \\
+$X + Y$ \\
+$\mu$ = 2 + 4 = 6 \\
+\mbox{} \\
+$\sigma^2$ = 0.5 + 2.5 = 3 \\ 
+\mbox{} \\
+$\sigma$ = $\sqrt{3}$ = 1.73 \\ 
+\mbox{} \\
+$X - Y$ \\ 
+$\mu$ = $|$2 - 4$|$ = 2 \\ 
+\mbox{} \\
+$\sigma^2$ = 0.5 + 2.5 = 3 \\ 
+\mbox{} \\
+$\sigma$ = $\sqrt{3}$ = 1.73 \\
 
 
 \end{document}
