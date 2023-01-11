@@ -1095,6 +1095,84 @@ $\sigma^2$ = 0.5 + 2.5 = 3 \\
 \mbox{} \\
 $\sigma$ = $\sqrt{3}$ = 1.73 \\
 
+\subsubsection{Fair Game}
+A fair game\footnote{Italian translation: gioco equo} is a game (a bet, as an example, or a lottery) in which the cost of playing the game equals the expected winnings of the game, so that net value of the game equals zero.
+
+$W = B/p = 1$ 
+\mbox{} \\
+Where:
+$W$ = win
+$B$ = Bet
+$p$ = probability
+
+\textbf{Is state lottery a fair game?}\\ 
+The Italian national lottery (“Lotto”) is a bingo where 5 numbers are drawn out of a poll of 90. Repetition is not allowed (extracted numbers are discarded)\footnote{\url{https://www.lotto-italia.it/lotto/come-dove-giocare/il-gioco/premi-del-lotto}}. 
+
+Players win if they have all the 5 numbers on the card, in no specific order (there are also some minor prizes such as “ambo” for two numbers, “terno” for three numbers, and such. But the logic is the same).
+
+A five is paying 6’000’000 times the bet.
+
+It this fair? Intuitively, it’s not. 
+
+But we are here not to assume but to investigate.
+
+All the combinations\footnote{see Combinatorics chapter for details} of 5 numbers are $ \displaystyle C _n ^k = \binom{n}{k}$ hence:
+
+$\frac{90!}{5!(90 - 5)!}$ = 43’949’268 
+
+This is obviously matching the official lottery statement.
+
+The probability of winning is then 1/43’949’268 = 0.00000228\%
+
+Fair game will assume: 
+
+$W = B/p = 1$
+
+But we have:
+W = 6’000’000
+B = 1
+p = 0.00000228\%
+
+$W = B/p$ = 1 / 0.00000228\% = 43’949’268
+
+How unfair is that game?
+
+43’949’268 / 6’000’000 = 7.32
+
+The Italian lotto is more than 7 times unfair for the player.
+\clearpage
+
+\section{Joint Distributions}
+Joint distributions allow us to mathematically quantify the relationship between two distributions of data. 
+
+Given two random variables that are defined on the same probability space, the joint probability distribution is the corresponding probability distribution on all possible pairs of outputs. 
+
+The joint distribution can just as well be considered for any given number of random variables. 
+
+The joint distribution encodes the marginal distributions, i.e. the distributions of each of the individual random variables. It also encodes the conditional probability distributions, which deal with how the outputs of one random variable are distributed when given information on the outputs of the other random variable(s).
+
+\subsection{Covariance}
+Covariance is a numerical value that provides a measure of how much two variables vary together.
+
+It evaluates how the variables change together, providing the \textbf{direction} of the variation. 
+It’s a measure of the variance between two variables. However, the metric does not assess the dependency between variables.
+
+A \textbf{positive covariance} means that it’s expected both variables have a concordant behavior ($X$ grows, $Y$ grows, $X$ decreases, $Y$ decreases).
+
+A \textbf{negative covariance} means that it’s expected both variables have a discordant behavior 
+($X$ grows, $Y$ decreases, $X$ decreases, $Y$ grows).
+
+A \textbf{neutral covariance} means that the variables have no relations with each other.
+
+Expressed in mathematical notation, covariance formulas are:
+
+\textbf{Population Covariance}: \\ 
+$\displaystyle cov(x, y) = \frac{1}{n}\sum \limits_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})$
+
+\textbf{Sample Covariance}: \\ 
+$\displaystyle cov(X, Y) = \frac{1}{N-1}\sum \limits_{i=1}^N (X_i - \bar{X})(Y_i - \bar{Y})$
+
+\subsection{Correlation}
 
 \end{document}
 
