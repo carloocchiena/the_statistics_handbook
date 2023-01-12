@@ -177,18 +177,18 @@ Quantitative data can be further classified in:
 \paragraph{Parametric vs Nonparametric}\mbox{} \\
 \mbox{} \\
 
-\textbf{Parametric tests}
+\textbf{Parametric}
 \begin{itemize}
-    \item Parametric tests assume the presence of distributions of approximately normal type.
+    \item Parametric assume the presence of distributions of approximately normal type.
     \item They involve continuous or interval-type variables and a fairly large sample size.
     \item They assume homogeneity of variances (homoscedasticity).
     \item They assume estimation of parametric data such as mean, variance and standard deviation.
 \end{itemize}
 
-These tests have higher statistical power because they provide a higher probability of correct rejection of an incorrect statistical hypothesis. 
+Parametric tests have higher statistical power because they provide a higher probability of correct rejection of an incorrect statistical hypothesis. 
 
-\textbf{Nonparametric tests}\mbox{} \\
-Nonparametric tests don’t imply any kind of distribution and don’t imply any kind of parametric estimation such as mean, variance and standard deviation (because, for example, such measures are not estimable).
+\textbf{Nonparametric}\mbox{} \\
+Nonparametric doesn’t imply any kind of distribution and doesn’t imply any kind of parametric estimation such as mean, variance and standard deviation (because, for example, such measures are not estimable).
 
 Nonparametric tests should be preferred whenever the dataset is not distributed in a normal (gaussian distribution) way, or, in any case, this specificity is not being demonstrated. A typical example is whenever the dataset is too small to prove a parametric distribution.
 
@@ -202,6 +202,19 @@ Nonparametric tests should be preferred whenever the dataset is not distributed 
 \textbf{Heteroscedasticity}  means that not all random variables in the database have the same finite variance.
 
 \includegraphics[width=3cm, height=3cm]{heteroscedasticity}
+
+\paragraph{Linear, Nonlinear, and Monotonic Relationships}\mbox{} \\ 
+\mbox{} \\
+
+\textbf{Linear}: \\ 
+When variables increase or decrease concurrently and at a constant rate, a positive linear relationship exists.
+When one variable increases while the other variable decreases, a negative linear relationship exists.
+
+\textbf{Nonlinear}: \\
+If a relationship between two variables is not linear, the rate of increase or decrease can change as one variable changes, causing a "curved pattern" in the data.
+
+\textbf{Monotonic}: \\
+In a monotonic relationship, the variables tend to move in the same relative direction, but not necessarily at a constant rate.
 
 \subsection{Population vs Sample}
 
@@ -246,7 +259,7 @@ The estimated or predicted values in a regression or other predictive model in s
 $\hat{y}$: $y$ is the outcome or dependent variable in the model equation, the "hat" symbol ($\hat{}$) placed over the variable name is the statistical designation of an estimated value.
 
 
-\subsection{Descriptive and inferential statistics}
+\subsection{Descriptive and Inferential statistics}
 
 \textbf{Descriptive statistics} is a part of statistics that aim to describe data. It is used to summarize the attribute of a dataset, using measures such as Measures of Central Tendency or Measures of Dispersion.
 
@@ -280,7 +293,7 @@ ${\displaystyle {\bar{x}}={\frac{1}{n}}\left(\sum _{i=1}^{n}{x_{i}}\right)={\fra
 Mean is the same concept of “average”, but average is generally used in arithmetic, while “mean” is expressingly considering the central point among a dataset in statistics. Arithmetic Mean is equal to average, while Harmonic or Geometric Mean have different meanings. 
 
 Mean can be expressed also with symbols:\\
-$\mu$ called MU or even with $\bar{x}$ ("ex bar").
+$\mu$ (mu) or even with $\bar{x}$ (x bar).
 
 In the specific context of statistical studies, 
 $\bar{x}$ is used for mean over sample.\\
@@ -363,10 +376,10 @@ The most common measurements of dispersion are Variance and Standard Deviation.
 Variance represents the positive distance from a single datapoint for the mean of the dataset. The positive distance is made thanks to the exponential factor applied to the distance of each datapoint. 
 The exponential factor also magnifies values that are more far from the mean in respect to smaller values, allowing to better understand their impact on the dataset. 
 
-Variance is represented by: $\sigma ^{2}$ (when referred to population), ${\displaystyle s^{2}}$ (when referred to sample), ${\displaystyle \operatorname {Var} (X)}, {\displaystyle V(X)}, or {\displaystyle \mathbb {V} (X)}$
+Variance is represented by: $\sigma ^{2}$ (sigma squared) (when referred to population), ${\displaystyle s^{2}}$ (when referred to sample), ${\displaystyle \operatorname {Var} (X)}, {\displaystyle V(X)}, or {\displaystyle \mathbb {V} (X)}$
 
 \subsubsection{Standard Deviation}
-Standard Deviation is the square root of Variance and it’s represented with the Greek $\sigma$ or the letter $s$.
+Standard Deviation is the square root of Variance and it’s represented with the greek letter $\sigma$ (sigma) or the letter $s$.
 
 Being square rooted, the SD returns a value that has again the same scale of our dataset, hence allowing for better comparisons and understanding. 
 
@@ -1173,6 +1186,226 @@ $\displaystyle cov(x, y) = \frac{1}{n}\sum \limits_{i=1}^n (x_i - \bar{x})(y_i -
 $\displaystyle cov(X, Y) = \frac{1}{N-1}\sum \limits_{i=1}^N (X_i - \bar{X})(Y_i - \bar{Y})$
 
 \subsection{Correlation}
+Correlation is a metric used to measure the \textbf{strength} of a  statistical relationship between two random variables. It’s also called a \textbf{measure} of relationship.
+
+The correlation coefficient is a dimensionless metric and its value ranges from -1 to +1. 
+
+The closer it is to +1 or -1, the more closely the two variables are related. 
+If there is no relationship at all between two variables, then the correlation coefficient will be close to 0. 
+
+However, if it is 0 then we can only say that there is no linear relationship. There could exist other functional relationships between the variables.
+
+\begin{itemize}
+    \item +1: positive correlation ($X$ grows, $Y$ grows, $X$ decreases, $Y$ decreases).
+    \item -1: negative correlation ($X$ grows, $Y$ decreases, $X$ decreases, $Y$ grows).
+\end{itemize}
+
+While Covariance measures just the direction of variation between two variables, Correlation explores the strength and relation of the variation, in a standardized and comparable format.
+
+In statistics application, there are three kind of correlation being applied:
+
+\begin{itemize}
+    \item Pearson (Parametric method).
+    \item Spearman (Nonparametric method).
+    \item Kendall (Nonparametric method).
+\end{itemize}
+
+\subsubsection{Pearson Correlation}
+Pearson correlation is the most widely used correlation statistic to measure the degree of the relationship between linearly related variables. 
+
+For the Pearson correlation, both variables should be normally distributed (normally distributed variables have a bell-shaped curve). 
+
+Pearson correlation assumptions:
+\begin{itemize}
+    \item Each observation should have a pair of values.
+    \item Each variable should be continuous.
+    \item Data have no outliers.
+    \item Variables linearity.
+    \item Variables homoscedasticity (homogeneity of variance).
+\end{itemize}
+
+\textbf{For a population}\\
+Pearson correlation is expressed with the greek letter $\rho$ (rho) when referred to population.
+Given a pair of random variables $(X,Y)$, the formula for $\rho$is:
+
+$\displaystyle \rho _{X,Y}={\frac{cov(X,Y)}{\sigma _{X}\sigma _{Y}}}$
+
+where:
+\begin{itemize}
+    \item $\displaystyle {cov}$ is the covariance.
+    \item $\displaystyle \sigma _{X}$ is the standard deviation of $X$.
+    \item $\displaystyle \sigma _{Y}$  is the standard deviation of $Y$.
+\end{itemize}
+
+\textbf{For a sample}\\
+Pearson's correlation coefficient, when applied to a sample, is commonly represented by $r_{xy}$ and may be referred to as the sample correlation coefficient or the sample Pearson correlation coefficient. 
+We can obtain a formula for $r_{xy}$ by substituting estimates of the covariances and variances based on a sample into the formula above. 
+Given paired data $\displaystyle \{(x_{1},y_{1}),\ldots ,(x_{n},y_{n})\}$ consisting of $n$ pairs, $r_{xy}$ is defined as:
+
+$\displaystyle r_{xy}={\frac {\sum _{i=1}^{n}(x_{i}-{\bar {x}})(y_{i}-{\bar {y}})}{{\sqrt {\sum _{i=1}^{n}(x_{i}-{\bar {x}})^{2}}}{\sqrt {\sum _{i=1}^{n}(y_{i}-{\bar {y}})^{2}}}}}$
+
+where:
+\begin{itemize}
+    \item $n$ is sample size.
+    \item $x_{i},y_{i}$ are the individual sample points indexed with $i$.
+    \item ${\textstyle {\bar {x}}={\frac {1}{n}}\sum _{i=1}^{n}x_{i}}$ (the sample mean); and analogously for $\bar {y}$.
+\end{itemize}
+
+Rearranging gives us this formula for $\displaystyle r_{xy}$:
+
+${\displaystyle r_{xy}={\frac {n\sum x_{i}y_{i}-\sum x_{i}\sum y_{i}}{{\sqrt {n\sum x_{i}^{2}-\left(\sum x_{i}\right)^{2}}}~{\sqrt {n\sum y_{i}^{2}-\left(\sum y_{i}\right)^{2}}}}}}$
+
+where $n,x_{i},y_{i}$ are defined as above.
+
+This formula suggests a convenient single-pass algorithm for calculating sample correlations.
+
+\subsubsection{Kendall Rank Correlation}
+Kendall rank correlation is a non-parametric test that measures the strength of dependence between two quantitative or qualitative ordinal statistical variables. 
+
+Kendall rank correlation is expressed with greek letter $\tau$ (tau)
+
+$\displaystyle \tau = \frac{n_c - n_d}{n_c + n_d} = \frac{n_c - n_d}{n(n - 1)/2}$
+
+where:
+\begin{itemize}
+    \item $n_c$ is the number of concordant pairs.
+    \item $n_d$ is the number of discordant pairs.
+    \item $n$ is the number of pairs.
+\end{itemize}
+
+Kendall rank assumptions:
+\begin{itemize}
+    \item Pairs of observations are independent.
+    \item Two variables should be measured on an ordinal, interval or ratio scale.
+    \item Monotonic relationship between the two variables.
+\end{itemize}
+
+\subsubsection{Spearman Rank Correlation}
+Spearman rank is a non parametric measure of rank correlation (measure of statistical dependence between the rankings of two variables). Spearman rank is also defined as the Pearson correlation between the rank variables.
+
+Spearman rank is denoted with same greeks as Pearson, $\rho$ and $r$.
+
+For a sample of size $n$, the $n$ raw scores $ X_{i},Y_{i}$ are converted to ranks ${R} ({X_{i}}), {R} ({Y_{i}})$, and $ r_{s}$ is computed as:
+
+$\displaystyle r_{s}=\rho _{{R} (X), {R} (Y)}={\frac { {cov} ( {R} (X),{R} (Y))}{\sigma _{ {R} (X)}\sigma _{{R} (Y)}}}$
+
+where:
+\begin{itemize}
+    \item $\rho$ denotes the usual Pearson correlation coefficient, but applied to the rank variables.
+    \item ${cov} ( {R} (X),{R} (Y))$  is the covariance of the rank variables.
+    \item $\sigma _{ {R} (X)}, \sigma _{{R} (Y)}$ are the standard deviations of the rank variables.
+\end{itemize}
+
+\mbox{}\\
+
+Spearman rank assumptions:
+\begin{itemize}
+    \item Pairs of observations are independent.
+    \item Two variables should be measured on an ordinal, interval or ratio scale.
+    \item Monotonic relationship between the two variables.
+\end{itemize}
+
+\subsubsection{Point-biserial Correlation coefficient}
+The Point-Biserial correlation coefficient is used when one of the given variable is dichotomous (such as “head or tail” on a coin flip).
+
+Point-biserial correlation coefficient is expressed with $r_{pb}$.
+
+\clearpage
+
+\section{Data Distributions}
+In statistics, and specifically to the field of descriptive statistics, a distribution is a representation of how different modes of a character are distributed across the statistical units that make up the collective under study.
+
+\subsection{Probability Mass Function (PMF)}
+Probability mass function is a function that gives the probability that a discrete random variable is exactly equal to some value. 
+
+$f(x) = P[X = x]$
+
+where $X$ is the \textbf{discrete random variable} and $x$ is the \textbf{target value}.
+
+\textbf{Example}:\\ 
+
+What is the probability of picking a specific ball out of a jar with 100 balls, all the balls being equal? 
+It’s 1/100, or 1\%.
+
+\paragraph{PMF Visualization}\mbox{} \\
+\mbox{} \\
+
+\includegraphics[width=3cm, height=3cm]{pmf}
+
+\textbf{Discrete Uniform Distribution} \\ 
+Discrete uniform distribution refers to discrete events where all the events have an equal chance of occurring (such as dice rolls).
+
+\includegraphics[width=3cm, height=3cm]{dud}
+
+\begin{itemize}
+    \item Notation: $\displaystyle {\mathcal{U}}\{a,b\}$ or $\displaystyle \text{unif} \{a,b\}$
+    \item Parameters: $\displaystyle a,b$ integers with $\displaystyle b\geq a$, $\displaystyle n=b-a+1$
+    \item Support: $\displaystyle k\in \{a,a+1,\dots ,b-1,b\}$
+    \item PMF: $\displaystyle {\frac {1}{n}}$
+    \item CDF: $\displaystyle {\frac {\lfloor k\rfloor -a+1}{n}}$ 
+    \item Mean: $\displaystyle {\frac {a+b}{2}}$ 
+    \item Median: $\displaystyle {\frac {a+b}{2}}$
+    \item Mode:	N/A
+    \item Variance: $\displaystyle {\frac {n^{2}-1}{12}}$
+\end{itemize}
+
+\subsection{Probability Density Function (PDF)}
+
+In probability theory, a probability density function (PDF), or density of a \textbf{continuous random variable}, is a function whose value at any given sample (or point) in the sample space (the set of possible values taken by the random variable) can be interpreted as providing a relative likelihood that the value of the random variable would be close to that sample.
+
+Density functions require switching from exact outcomes (such as for discrete variables) to approximations or interval ranges for an infinite set of values within the probability interval (in a continuous interval, the values of the variable are so small to be practically uncountable).
+
+$\displaystyle Pr[a\leq X\leq b]=\int _{a}^{b}f_{X}(x)dx$
+
+with:
+\begin{itemize}
+    \item $P(x=c)=0$
+    
+\end{itemize}
+
+More technically, In a continuous distribution (e.g. continuous uniform, normal, and others), the probability is calculated by integration, as an area under the probability density function.
+
+For $f(x)$ to be a legitimate PDF, it must satisfy the following two conditions:
+\begin{itemize}
+    \item $f(x) \geq 0$, $\forall x \in \mathbb{R}$
+    \item $\displaystyle \int _{-\infty }^{\infty } f(x)dx=1$
+\end{itemize}
+If a random variable $X$ is given and its distribution admits a probability density function $f$, then the expected value of $X$ (if the expected value exists) can be calculated as:
+
+$\displaystyle {E} [X]=\int _{-\infty }^{\infty }xf(x)dx$
+
+Not every probability distribution has a density function: the distributions of discrete random variables do not, for example.
+
+Note also that within a PDF, the probability of having a specific, exact value (such as in PMF) is always equal to zero. The expectation is for an approximation $(a < X < b)$ and not for an equality $(X = a)$.
+
+There are many kinds of probability density functions (actually more than 100, going from very common normal distribution, Pareto distribution, uniform distribution, to other less common distributions such as Polya-Gamma). 
+
+\paragraph{PDF Visualization}\mbox{} \\
+\mbox{} \\
+
+\includegraphics[width=3cm, height=3cm]{pdf}
+
+\textbf{Continuous Uniform Distribution} \\
+In probability theory and statistics, the continuous uniform distribution or rectangular distribution is a family of symmetric probability distributions. The distribution describes an experiment where there is an arbitrary outcome that lies between certain bounds. 
+
+The bounds are defined by the parameters, a and b, which are the minimum and maximum values. The interval can either be closed (ex. [a, b]) or open (ex. (a, b)).
+Therefore, the distribution is often abbreviated U (a, b), where U stands for uniform distribution.
+
+\includegraphics[width=3cm, height=3cm]{cud}
+
+\begin{itemize}
+    \item Notation: $\displaystyle {\mathcal {U}}_{[a,b]}$
+    \item Parameters: $\displaystyle -\infty <a<b<\infty$
+    \item Support: $\displaystyle x\in [a,b]$
+    \item PDF: $\displaystyle {\begin{cases}{\frac {1}{b-a}}&{\text{for }}x\in [a,b]\\0&{\text{otherwise}}\end{cases}}$
+    \item CDF: $\displaystyle {\begin{cases}0&{\text{for }}x<a\\{\frac {x-a}{b-a}}&{\text{for }}x\in [a,b]\\1&{\text{for }}x>b\end{cases}}$
+    \item Mean: $\displaystyle {\tfrac {1}{2}}(a+b)$
+    \item Median:	$\displaystyle {\tfrac {1}{2}}(a+b$)
+    \item Mode:	any value in $\displaystyle (a,b)$
+    \item Variance:	$\displaystyle {\tfrac {1}{12}}(b-a)^{2}$
+\end{itemize}
+
+
 
 \end{document}
 
