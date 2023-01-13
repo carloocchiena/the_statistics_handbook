@@ -1405,6 +1405,110 @@ Therefore, the distribution is often abbreviated U (a, b), where U stands for un
     \item Variance:	$\displaystyle {\tfrac {1}{12}}(b-a)^{2}$
 \end{itemize}
 
+\subsection{Cumulative Distribution Functions (CDF)}
+The cumulative distribution function (CDF) is the probability that the variable takes a value less than or equal to x. 
+
+$F(x) = P(X \leq x)$, $\forall x \in \mathbb{R}$  
+
+CDF expresses the cumulative probability of a given event.
+
+\textbf{Discrete Cumulative Distribution Function} \\
+A CDF in a discrete set.
+
+As an example, rolling a standard dice:
+\begin{itemize}
+    \item the CDF of having no numeric input is 0.
+    \item the CDF of a number from 1 to 6 is 1 (6/6).
+    \item the CDF of a number less or equal to 3 is 3/6.
+\end{itemize}
+
+\includegraphics[width=3cm, height=3cm]{discrete_cdf}
+
+\textbf{Continuous Cumulative Distribution Function} \\
+The cumulative distribution function, CDF, or cumulant is a function derived from the probability density function for a continuous random variable. It gives the probability of finding the random variable at a value less than or equal to a given cutoff. Many questions and computations about probability distribution functions are convenient to rephrase or perform in terms of CDFs, ex. computing the PDF of a function of a random variable.
+
+\includegraphics[width=3cm, height=3cm]{continuos_cdf}
+
+\subsection{Binomial Distribution}
+Binomial distribution expresses the discrete probability distribution of an experiment that is repeated multiple times, having only two possible outcomes: positive or negative. 
+Binomial refers to the distribution having only two possible outcomes, positive or negative. 
+
+Binomial distribution is expressed as $B(n,p)$, with n being trials and p being the probability of success. 
+
+$ \displaystyle f(k,n,p)=\Pr(k;n,p)=\Pr(X=k)={\binom {n}{k}}p^{k}(1-p)^{n-k}$
+
+for $k = 0, 1, 2, \ldots, n$ where, as already explained:
+
+$ \displaystyle {\binom {n}{k}}={\frac {n!}{k!(n-k)!}}$
+
+Binomial distribution should respect the following criteria:
+\begin{itemize}
+    \item Outcome is binomial (positive or negative, 1 or 0, + or - etc.).
+    \item Each event is independent.
+    \item The number of trials n is fixed.
+    \item Success \textbackslash failure rate p is constant.
+\end{itemize}
+
+\begin{itemize}
+    \item Notation: $B(n,p)$
+    \item Parameters: 
+        \begin{itemize}
+            \item $ \displaystyle n\in \{0,1,2,\ldots \} $ – number of trials 
+            \item $ \displaystyle p\in [0,1] $ – success probability for each trial
+            \item $ {\displaystyle q=1-p} $
+        \end{itemize}
+    \item Support: $ \displaystyle k\in \{0,1,\ldots ,n\}$ – number of successes 
+    \item PMF: $ \displaystyle {\binom {n}{k}}p^{k}q^{n-k} $
+    \item CDF: $ \displaystyle I_{q}(n-k,1+k) $ (the regularized incomplete beta function)
+    \item Mean: $np$
+    \item Median: $\lfloor np \rfloor$  or $\lceil np \rceil $
+    \item Mode: $\lfloor (n+1)p \rfloor$  or $\lceil (n+1)p \rceil -1 $
+    \item Variance: $npq$ 
+\end{itemize}
+
+\textbf{Example of a binomial distribution:} \\
+
+According to a report, 80\% of prospects at company $\alpha$ will result in a signed contract. Each prospect is independent of each other.
+It's asked to calculate the probability to close a deal from a round of 3 prospects they are working on.
+
+Hence:
+\begin{itemize}
+    \item $n$ = Number of trials = 3
+    \item Number of outcomes = binary positive \textbackslash negative (contract or no contract).
+    \item $p$ = Probability of success = 0.8
+    \item Trials are independent = yes.
+    \item $k$ = Target result = 1 contract closed = 1
+\end{itemize}
+
+$ \displaystyle {\binom {n}{k}} = {\binom {3}{1}} = \frac{3!}{1!(3 - 1)!} = 3$
+
+and then $B = 3 * (0.8^1)(1 - 0.8)^(3-1)$ = 0.096
+
+Calculating then the values for each value of $k \in n$, hence $P\binom {n}{k}$ = P(3,0), P(3,1), P(3,2), P(3,3) we should be able to plot a chart of the distribution.
+
+
+\includegraphics[width=3cm, height=3cm]{excel_chart_1}
+
+\subsection{Bernoulli Distribution}
+The Bernoulli distribution is the discrete probability distribution of a random variable which takes the value 1 with probability $p$ and the value 0 with probability $q = 1 - p$. 
+Less formally, it can be thought of as a model for the set of possible outcomes of any single experiment that asks a yes-no (boolean) question. 
+Such questions lead to outcomes that are boolean-valued: a single bit whose value is success, yes, true, 1 with probability $p$ and failure, no, false, 0 with probability $q = 1 - p$. 
+
+Bernoulli distribution can be see as a specific case of binomial distribution, where:
+\begin{itemize}
+    \item Binomial distribution: n trials
+    \item Bernoulli distribution: one trial.
+\end{itemize}
+
+
+
+It can be used to represent a (possibly biased) coin toss where 1 and 0 would represent "heads" and "tails", respectively, and $p$ would be the probability of the coin landing on heads (or vice versa where 1 would represent tails and $p$ would be the probability of tails). In particular, unfair coins would have $p \neq  1/2 $
+
+
+
+
+
+
 
 
 \end{document}
