@@ -1337,6 +1337,8 @@ Discrete uniform distribution refers to discrete events where all the events hav
 
 \includegraphics[width=3cm, height=3cm]{dud}
 
+\paragraph{PMF Overview}\mbox{} \\
+
 \begin{itemize}
     \item Notation: $\displaystyle {\mathcal{U}}\{a,b\}$ or $\displaystyle \text{unif} \{a,b\}$
     \item Parameters: $\displaystyle a,b$ integers with $\displaystyle b\geq a$, $\displaystyle n=b-a+1$
@@ -1392,6 +1394,8 @@ The bounds are defined by the parameters, a and b, which are the minimum and max
 Therefore, the distribution is often abbreviated U (a, b), where U stands for uniform distribution.
 
 \includegraphics[width=3cm, height=3cm]{cud}
+
+\paragraph{CUD Overview}\mbox{} \\
 
 \begin{itemize}
     \item Notation: $\displaystyle {\mathcal {U}}_{[a,b]}$
@@ -1449,6 +1453,8 @@ Binomial distribution should respect the following criteria:
     \item Success \textbackslash failure rate p is constant.
 \end{itemize}
 
+\paragraph{Binomial Distribution Overview}\mbox{} \\
+
 \begin{itemize}
     \item Notation: $B(n,p)$
     \item Parameters: 
@@ -1462,7 +1468,7 @@ Binomial distribution should respect the following criteria:
     \item CDF: $ \displaystyle I_{q}(n-k,1+k) $ (the regularized incomplete beta function)
     \item Mean: $np$
     \item Median: $\lfloor np \rfloor$  or $\lceil np \rceil $
-    \item Mode: $\lfloor (n+1)p \rfloor$  or $\lceil (n+1)p \rceil -1 $
+    \item Mode: $\lfloor (n+1)p \rfloor$  or $\lceil (n+1)p \rceil-1 $
     \item Variance: $npq$ 
 \end{itemize}
 
@@ -1500,9 +1506,171 @@ Bernoulli distribution can be see as a specific case of binomial distribution, w
     \item Bernoulli distribution: one trial.
 \end{itemize}
 
-
-
 It can be used to represent a (possibly biased) coin toss where 1 and 0 would represent "heads" and "tails", respectively, and $p$ would be the probability of the coin landing on heads (or vice versa where 1 would represent tails and $p$ would be the probability of tails). In particular, unfair coins would have $p \neq  1/2 $
+
+\paragraph{Bernouilli Distribution Overview}\mbox{} \\
+
+\begin{itemize}
+    \item Notation: $X \sim B(1,p)$
+    \item Parameters: 
+        \begin{itemize}
+            \item $ 0 \leq p \leq 1 $
+            \item $ q=1 - p $
+        \end{itemize}
+    \item Support: $ k\in \{0,1\} $
+    \item PMF: $ \displaystyle {\begin{cases}q=1-p&{\text{if }}k=0\\p&{\text{if }}k=1\end{cases}} $
+    \item CDF: $ \displaystyle {\begin{cases}0&{\text{if }}k<0\\1-p&{\text{if }}0\leq k<1\\1&{\text{if }}k\geq 1\end{cases}} $
+    \item Mean: $p$
+    \item Median: $ \displaystyle {\begin{cases}0&{\text{if }}p<1/2\\\left[0,1\right]&{\text{if }}p=1/2\\1&{\text{if }}p>1/2\end{cases}} $
+    \item Mode: $ \displaystyle {\begin{cases}0&{\text{if }}p<1/2\\0,1&{\text{if }}p=1/2\\1&{\text{if }}p>1/2\end{cases}} $
+    \item Variance: $ \displaystyle p(1-p)=pq $ 
+\end{itemize}
+
+\subsection{Poisson Distribution}
+Poisson distribution is a discrete probability distribution that expresses the probability of a given number of events occurring in a fixed interval of time or space if these events occur with a known constant mean rate and independently of the time since the last event.
+
+A discrete random variable $X$ is said to have a Poisson distribution, with parameter $\lambda > 0$, if it has a probability mass function given by:
+
+$ \displaystyle f(k;\lambda )=\Pr(X{=}k)={\frac {\lambda ^{k}e^{-\lambda }}{k!}} $
+
+where:
+\begin{itemize}
+    \item k is the number of occurrences ($…k=0,1,2,\ldots) $.
+    \item e is Euler's number ($ e=2.71828\ldots$)
+    \item ! is the factorial function.
+\end{itemize}
+
+Poisson distribution should respect the following criteria:
+\begin{itemize}
+    \item The mean number of events occurring within a given interval of time or space lambda ($\lambda$) is known and assumed to be constant.
+    \item Occurrences occur in an interval and are discrete and countable.
+    \item Events occur independently one to another.
+    \item The average rate at which events occur is independent of any occurrences (assumed to be constant).
+    \item Two events cannot occur exactly at the same instant. At each atomic interval, either or one event occurs or no event occurs (it means that intervals are not overlapping).
+    \item Probability is proportional to interval size. 
+\end{itemize}
+
+Some examples of Poisson distribution are:
+\begin{itemize}
+    \item The number of chewing gum on a single tile over a sidewalk. 
+    \item The number of planes that fly over a specific house in an hour.
+\end{itemize}
+
+One of the first applications of Poisson distribution was the investigation of deaths by horse kick in soldiers in 1800. Researchers were interested in inferring the deaths by horse kick in a year.
+\begin{itemize}
+    \item Event = death by kick
+    \item Time interval = 1 year
+    \item $\lambda$ = 0.61
+\end{itemize}
+
+The number of times an event is investigated is $k$ and is assumed to be $k = 2$ (we want to calculate the probability that in a year 2 soldiers will die from a horse kick).
+
+Hence: 
+
+P($X = k$ where $k = 2$) = $ \displaystyle \frac {0.61^{2}e^{-0.61 }}{2!} $ = 0.101 
+
+\paragraph{Poisson Distribution Overview}\mbox{} \\
+
+\begin{itemize}
+    \item Notation: $Pois(\lambda)$
+    \item Parameters: $ \displaystyle \lambda \in (0,\infty)$ (rate)
+    \item Support: $ \displaystyle k\in \mathbb {N} _{0}$ (Natural numbers starting from 0) 
+    \item PMF: $ \displaystyle {\frac {\lambda ^{k}e^{-\lambda }}{k!}} $
+    \item CDF: $ \displaystyle {\frac {\Gamma (\lfloor k+1\rfloor ,\lambda )}{\lfloor k\rfloor !}}$, or $\displaystyle e^{-\lambda }\sum _{j=0}^{\lfloor k\rfloor }{\frac {\lambda ^{j}}{j!}}$, \\ or $\displaystyle Q(\lfloor k+1\rfloor ,\lambda )$ \\ (for $\displaystyle k\geq 0$, where $\Gamma (x,y)$ is the upper incomplete gamma function, $ \displaystyle \lfloor k\rfloor $ is the floor function, and $Q$ is the regularized gamma function).
+    \item Mean: $\lambda$
+    \item Median: $ \displaystyle \approx \left\lfloor \lambda +{\frac {1}{3}}-{\frac {1}{50\lambda }}\right\rfloor $
+    \item Mode: $ \displaystyle \left\lceil \lambda \right\rceil -1,\left\lfloor \lambda \right\rfloor $
+    \item Variance: $ \lambda $ 
+\end{itemize}
+
+\clearpage
+
+\section{Normal Distribution}
+In statistics, a normal distribution or Gaussian distribution is a type of continuous probability distribution for a real-valued random variable. 
+
+The general form of its probability density function is:
+
+$\displaystyle f(x)={\frac {1}{\sigma {\sqrt {2\pi }}}}e^{-{\frac {1}{2}}\left({\frac {x-\mu }{\sigma }}\right)^{2}}$
+
+A random variable with a Gaussian distribution is said to be normally distributed and is called a normal deviate
+
+Normal distribution is one of the most common distribution used in business, statistics, biology, etc., since so many real-life datasets end up resembling a normal distribution (see also: Central Limit Theorem).
+
+Normal distributions are referred to with capital letter $N$, such as $N(5,9)$ means a normal distribution with mean 5 and variance 9.
+
+Normal distributions have unique properties of mean and standard deviation.
+
+\paragraph{The Empirical Rule}\mbox{} \\
+\mbox{} \\
+
+The below chart helps understanding the empirical rule.
+
+The empirical rule (also known as three-sigma rule or 68-95-99.7 rule) states that for a normal distribution, almost all observed data will fall within the range of $3 \sigma $ from the mean $ \mu $. 
+
+\includegraphics[width=5cm, height=3cm]{empirical}
+
+In particular, it can be stated that:
+\begin{itemize}
+    \item 68\% of observations will fall within the first standard deviations ($\mu \pm \sigma $).
+    \item 95\% of observations will fall within the first two standard deviations ($\mu \pm 2\sigma $).
+    \item 99.7\% of observations will fall within the first three standard deviations ($\mu \pm 3\sigma $)
+\end{itemize}
+
+\subsection{Z-Score}
+Z-score (even called standard score) is the number of standard deviations by which the value of an observed value or data point is above or below the mean of the distribution. Less technically, z-scores represents how a given data point is far from the mean.
+
+Negative z-scores fall on the left of the distribution (-4 being the further) while positive z-scores fall on the right of the distribution (+4 being the further).
+
+\includegraphics[width=8cm, height=6cm]{normal_distribution}
+
+Z-score standardization formula is:
+
+$\displaystyle Z={\frac {X-\mu }{\sigma }}$
+
+\subsubsection{Z-Tables}
+A z-table, or standard normal table, reveals what percentage of values fall below a certain z-score in a normal distribution. It allows to translate specifics z-scores to their statistic relevance in a normal distribution.
+
+The table has z decimal values on the row header, and hundredth values on the table header. First turn your data into a normal distribution. Then find the matching z-score to the left of the table and align it with the z-score at the top of the table. The result gives you the probability. 
+
+The image below shows the probability for a z-score of 1.2 + 0.5 = 1.25, that is 0.89435.
+
+\includegraphics{z-table}
+
+A z-table can also be created from the ground-up, in example: 
+\begin{enumerate}
+    \item with Excel using the formula:
+    \begin{enumerate}
+        \item =+NORM.S.DIST($A2+B$1;TRUE), having "A" column = [0, 0.1, 0.2, …, 3.4] and row 1 = [0, 0.01, 0.02, …, 0.09]
+    \end{enumerate}
+    \item with a programming language, such as R or Python (here is script for generating a z-table in Python: \href{https://gist.github.com/carloocchiena/f65e1381a30004352561a606ee0ba51a}{gist.github.com/carloocchiena/})
+\end{enumerate}
+
+\subsection{Normality Test}
+In theory, a normal distribution follows precisely a Gaussian curve. But real world data is rarely so precise and could be the case we may be willing to test if the distribution we are working with is effectively normal.
+
+Normality tests are used to determine if a data set is well-modeled by a normal distribution and to compute how likely it is for a random variable underlying the data set to be normally distributed. 
+
+Normality tests return a probability of normality. More specifically, these tests operate using a hypothesis paradigm, where you posit an hypothesis that your particular data sample is normally distributed. 
+
+Normality tests are such as:
+\begin{itemize}
+    \item D'Agostino's K-squared test.
+    \item Jarque–Bera test.
+    \item Anderson–Darling test.
+    \item Kolmogorov–Smirnov test.
+    \item Shapiro–Wilk test.
+\end{itemize}
+
+\subsection{Skewed Distribution (Skewness)}
+Skewness is a measure of the asymmetry of the probability distribution of a random variable in respect to the mean of the distribution. 
+
+Would be useful to remember that for a symmetric distribution, and, specifically, for a normal distribution, median = mean = mode.
+
+Negative Skew
+The left tail is longer; the mass of the distribution is concentrated on the right of the figure. The distribution is said to be left-skewed, left-tailed, or skewed to the left, despite the fact that the curve itself appears to be skewed or leaning to the right; left instead refers to the left tail being drawn out and, often, the mean being skewed to the left of a typical center of the data. A left-skewed distribution usually appears as a right-leaning curve.
+
+Positive Skew
+The right tail is longer; the mass of the distribution is concentrated on the left of the figure. The distribution is said to be right-skewed, right-tailed, or skewed to the right, despite the fact that the curve itself appears to be skewed or leaning to the left; right instead refers to the right tail being drawn out and, often, the mean being skewed to the right of a typical center of the data. A right-skewed distribution usually appears as a left-leaning curve
 
 
 
