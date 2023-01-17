@@ -137,6 +137,7 @@ Do not confuse “file format” with “formatted data”.
 Just because text is in a PDF format doesn't make it structured data. 
 
 \subsubsection{Statistical Variables and their properties}
+
 \paragraph{Qualitative Statistical Variables}\mbox{} \\
 \mbox{} \\
 
@@ -1666,15 +1667,171 @@ Skewness is a measure of the asymmetry of the probability distribution of a rand
 
 Would be useful to remember that for a symmetric distribution, and, specifically, for a normal distribution, median = mean = mode.
 
-Negative Skew
+\textbf{Negative Skew} \\
 The left tail is longer; the mass of the distribution is concentrated on the right of the figure. The distribution is said to be left-skewed, left-tailed, or skewed to the left, despite the fact that the curve itself appears to be skewed or leaning to the right; left instead refers to the left tail being drawn out and, often, the mean being skewed to the left of a typical center of the data. A left-skewed distribution usually appears as a right-leaning curve.
 
-Positive Skew
+\textbf{Positive Skew} \\
 The right tail is longer; the mass of the distribution is concentrated on the left of the figure. The distribution is said to be right-skewed, right-tailed, or skewed to the right, despite the fact that the curve itself appears to be skewed or leaning to the left; right instead refers to the right tail being drawn out and, often, the mean being skewed to the right of a typical center of the data. A right-skewed distribution usually appears as a left-leaning curve
 
+\includegraphics[width=5cm, height=5cm]{skew}
 
+\subsection{Kurtosis}
+While skewness refers to the tendency of a distribution to propagate in respect to its mean, \textbf{kurtosis} measures the sharpness of the curve in respect of its distribution. 
 
+It can also be stated more simply that skewness represents the vertical distance of the curve from a normal distribution, while kurtosis represents the horizontal distance of the curve from a normal distribution.    
 
+\begin{itemize}
+    \item \textbf{Skewness}: lack of symmetry in the distribution.
+    \item \textbf{Kurtosis}: height and sharpness of the central peak.
+\end{itemize}
+
+\includegraphics[width=5cm, height=5cm]{kurtosis}
+
+\subsection{Standard Normal Distribution}
+The standard normal distribution, also known as the z-distribution (Z), is a particular case of normal distribution. Standard Normal Distribution has a mean = 0 and the standard deviation = 1.
+
+$Z = N(0,1)$
+
+Any normal distribution can be standardized by converting its values into z scores. Z scores tell you how many standard deviations from the mean each value lies.
+
+\clearpage
+
+\section{Sampling}
+Sampling is the selection of a subset (a \textbf{sample}) of individuals from within a statistical \textbf{population} to estimate characteristics of the whole population. Statisticians attempt to collect samples that are representative of the population in question. Sampling has lower costs and faster data collection than measuring the entire population and can provide insights in cases where it is infeasible to measure an entire population.
+
+Sampling allows to test a hypothesis about general characteristics of a population.
+Samples are used to make inferences about a population. 
+
+One can think of sampling as grabbing data instances from a larger data distribution. 
+
+\subsection{Sampling Methodologies}
+The representativeness of the selected sample is a crucial element in creating a good sampling. Therefore, there are different types of sampling that can be chosen appropriately according to the characteristics of the population.
+
+Some of the discriminating criteria in choosing a sampling method may be:
+\begin{itemize}
+    \item Nature and quality of the frame.
+    \item Availability of auxiliary information about units on the frame.
+    \item Accuracy requirements, and the need to measure accuracy.
+    \item Whether detailed analysis of the sample is expected.
+    \item Cost/operational concerns.
+\end{itemize}
+
+In general terms, it can be stated that a good sampling is:
+\begin{itemize}
+    \item Representative of the population.
+    \item Unbiased. 
+\end{itemize}
+ 
+\subsubsection{Simple Random Sample (SRS)}
+A simple random sample (or SRS) is a subset of individuals (a sample) chosen from a larger set (a population) in which a subset of individuals are chosen randomly, all with the same probability. It is a process of selecting a sample in a random way.
+
+\subsubsection{Systematic Random Sample}
+Systematic random sample is a subclass of SRS. Every member of the population is labeled with a number, and the sample is picked using a fixed interval (i.e. one out of every 10 members).
+
+\subsubsection{Stratified Random Sample}
+Stratified random sample is a subclass of SRS, where the population can be further classified into subpopulations. Subpopulations can’t overlap and they should be proportional in order for the sample to be relevant. 
+
+\subsubsection{Clustered Random Sample}
+Clustered random sample is a sampling methodology that can be used whenever the population can be aggregated into mutually homogeneous yet internally heterogeneous groupings. 
+After the population is divided into clusters, then a SRS is performed on each cluster.
+It’s a sampling method often used in marketing research.
+
+\subsection{Central Limit Theorem}
+In probability theory, the central limit theorem (CLT) establishes that, in many situations, when independent random variables are summed up, their properly normalized sum tends toward a normal distribution around the mean of the original dataset even if the original variables themselves are not normally distributed.
+
+It implies that probabilistic and statistical methods that work for normal distributions can be applicable to many problems involving other types of distributions.
+
+The CLT establishes a relationship between the data from the whole population (parameters) and the data from the sample (statistics). 
+
+\begin{itemize}
+    \item The mean of the distribution of sample means is the \textbf{expected value of $M$} and is always equal to the population mean $\mu$.
+    \item The standard deviation of the distribution of sample means is \textbf{the standard error of $M$} (SE) and is computed by: $\sigma{M} = \frac{\sigma}{\sqrt{n}}$. As the sample size increases, the error decreases.  As the sample size decreases, the error increases.  At the extreme, when n = 1, the error is equal to the standard deviation.
+    \item The shape of the distribution of sample means tends to be normal. It is guaranteed to be normal if either: 
+    \begin{itemize}
+        \item The population from which the samples are obtained is normal.
+        \item The sample size is n = 30 or more.
+    \end{itemize}  
+\end{itemize}
+
+\subsubsection{Sampling Distribution of the Sample Mean}
+The distribution of sample means is defined as the set of means from all the possible random samples of a specific size (n) selected from a specific population. 
+
+If repeated random samples of a given size n are taken from a population of values for a quantitative variable, the mean of all sample means is population mean.
+
+$\bar{x} = \mu $
+
+\paragraph{More on mean of the sampling being equal to the mean of the population}\mbox{} \\
+\mbox{} \\
+This statement can leads to wrong assumptions - since the mean of the sample typically is not equal to the mean of the population \textbf{unless samples are taken listing all the possible samples over the population (combinations)}.
+
+The idea is that when we think of taking a sample, there are a large number of possible samples, from which we will choose just one. However, we need to imagine having all the samples available, and knowing the mean of each one. This list of all the possible sample means makes up the distribution of the sampling means (“the sampling distribution of the means”). Now, this distribution itself has a mean, which is how we get the somewhat confusing phrase “mean of means.”
+
+So, while the mean of one sample is an estimate of the population mean and rarely equal to it, the mean of (all the means of all the possible samples), is exactly equal to the population mean. This is the basis of an important result in statistical theory, that the sample mean is an unbiased estimator of the population mean. There are other candidates for an estimator of the population mean, such as the median, the mode, or the geometric average. While they might be unbiased in certain situations, none of them are “in general” an unbiased estimator of the mean, like the sample mean is.\footnote{This explanation has been provided in an online debate from Dwight Galster, Statistics PhD from NDSU.}
+
+\paragraph{Finite Population Correction Factor (FPC)}\mbox{} \\
+\mbox{} \\
+Finite Population Correction Factor (FPC) is used to adjust sampling bias whenever sampling is done without replacement and over more than the 5\% of a finite population (both frequent real case scenarios).
+
+\textbf{Example}: you have to apply FPC if picking 600 people (>5\%) from a city telephone address book of 10’000 members (population is finite and whenever a person is picked from the list, can’t be picked again).
+
+$FPC = \sqrt{\frac{N -n}{N - 1}}$
+
+To apply a finite population correction, multiply it by the standard error that you would have originally used.
+
+For example, the standard error of a mean is calculated as:
+
+$\sigma{M} = \frac{\sigma}{\sqrt{n}}$
+
+By applying the finite population correction, the formula becomes:
+
+$\sigma{M} = \frac{\sigma}{\sqrt{n}}\sqrt{\frac{N -n}{N - 1}}$
+
+\subsection{The Student's T-Distribution}
+Student's t-distribution a family of continuous probability distributions that arise when estimating the mean of a normally distributed population in situations where the sample size is small and the population's standard deviation is unknown.
+
+The t-distribution was developed by English statistician William Sealy Gosset. 
+At the time (1912) he published more than 20 academic papers, mostly using the pseudonym “Student”.
+The t-distribution was originally called “Test of statistical significance” or “Student’s z” (for its similarity to Z distribution).
+In the end he could have called it “Gosset distribution”, but he passed to history as “Student”. 
+
+The formula to calculate the T-distribution is:
+
+$t= \frac{(\bar{x} - \mu)}{s/\sqrt{n}}$
+
+where:
+\begin{itemize}
+    \item $\bar{x}$ is the sample mean.
+    \item $\mu$ is the population mean.
+    \item $s$ is the standard deviation.
+    \item $n$ is the size of the given sample.
+\end{itemize}
+
+\subsubsection{Degrees of freedom (DF)}
+The number of degrees of freedom is the number of values in the final calculation of a statistic that are free to vary (independent, known, available data).
+
+Degrees of freedom (DF) is equal to the size of the sample n minus 1.
+
+$DF = n - 1$
+
+The explanation for this lies in the fact that the punctual features of a dataset can be computed backward knowing the global features of the dataset.
+For example, having a dataset of 15 elements, and knowing the mean, we are free to delete one of these values, since knowing the mean we are able to calculate it backwards.
+But what happens if, for example, we delete two values? We are able to trace the global value of the two variables but not to assign their value in a timely and independent way.
+That is why DF is calculated as $n - 1$.
+
+\subsubsection{T-Score}
+The T-distribution (and those associated T-score values) is used in hypothesis testing
+ when determining if one should reject or accept the null hypothesis.
+
+Values of T-score have to be compared on a T-table\footnote{https://www.sjsu.edu/faculty/gerstman/StatPrimer/t-table.pdf} with a process similar to the Z-scores.
+
+\paragraph{When to use Z-distribution and when T-distribution?}\mbox{} \\
+\mbox{} \\
+\begin{itemize}
+    \item If sample < 30, t-distribution will provide a more accurate value.
+    \item If sample > 30, z-distribution will provide a more accurate one.
+\end{itemize}
+
+\subsection{Confidence interval for the mean}
 
 
 
