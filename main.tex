@@ -1831,7 +1831,205 @@ Values of T-score have to be compared on a T-table\footnote{https://www.sjsu.edu
     \item If sample > 30, z-distribution will provide a more accurate one.
 \end{itemize}
 
-\subsection{Confidence interval for the mean}
+\subsection{Mean Estimation and Confidence Intervals}
+ Estimation, in statistics, is concerned with inference about the numerical value of unknown population values from incomplete data such as a sample from a population.
+
+\begin{itemize}
+    \item Estimates about the population can be made sampling from the entire population dataset.
+    \item If the estimate is made from a single value, it is called a “point estimate”.
+    \item If the estimate is made from a range of values where the parameter is expected to lie, it’s called an “interval estimate”.
+\end{itemize} 
+
+\subsubsection{Point Estimation}
+Point estimation involves the use of sample data to calculate a single value (called point estimate since it identifies a point in some parameter space) which is to serve as a "best guess" or "best estimate" of an unknown population parameter (for example, the population mean). 
+
+More informally, point estimation is the process of finding an appropriate value of a population parameter, such as the mean of the population, from random samples of the population.
+
+
+Hence, at $t0$, the accuracy of a particular approximation is not known precisely. 
+
+\subsubsection{Interval Estimation}
+Interval estimation is the use of sample data to estimate an interval of plausible values of a parameter of interest. This is in contrast to point estimation, which gives a single value.
+
+Interval estimation involves the evaluation of a parameter of a population (for example, the population mean) by computing an interval, or range of values, within which the parameter is most likely to be located. 
+
+Intervals are commonly chosen within \textbf{confidence intervals (CI)}, such that the parameter falls within a \textbf{confidence level (CL)} of 95\% or 99\% (confidence coefficient). For example, out of all intervals computed at the 95\% level, 95\% of them should contain the parameter's true value.
+
+The end points of such an interval are called upper and lower confidence limits.
+
+\subsubsection{Confidence Interval (CI)}
+A confidence interval refers to the probability that a population parameter will fall between a set of values for a certain probability. That probability is known as confidence level.
+
+Thus, if a point estimate is generated from a statistical model of 10.00 with a 95\% confidence interval of 9.50 - 10.50, it can be inferred that there is a 95\% probability that the true value falls within that range.
+
+The percentage falling outside the confidence level is called $\alpha$ (alpha) value or level of significance (LOS). So the $alpha$ value associated with a 90\% confidence level is 10\%. 
+Mathematically speaking, the confidence interval can be defined as:
+
+$CI = \bar{x} \pm MOE$
+
+where:
+\begin{itemize}
+    \item $\bar{x}$ is the sample mean.
+    \item $MOE$ = $z_y SE$ = $z_y \frac{\sigma}{\sqrt{n}}$ is the Standard Error, $z_y$ being the quantile or z-score.
+\end{itemize}
+
+If standard deviation is not known, then we need to use a t-score instead of a t-score.
+
+\subsubsection{Confidence Level (CL)}
+The confidence level measures the level of trust\footnote{a note for Italian readers: “Confidence” translates to “Fiducia” and not to “Confidenza” as we’re used to say} of the accuracy of the provided interval. 
+
+\begin{itemize}
+    \item Higher confidence levels means a wider range of values.
+    \item Lower confidence levels means a tighter range of values.
+\end{itemize}
+
+\subsubsection{Confidence interval and Z-scores}
+Since we already know that the most common confidence intervals are 90\%, 95\% and 99\%, we can already get confidence with the Z-values associated with such levels.
+\begin{itemize}
+    \item 90\% CL = Z +/- 1.65
+    \item 95\% CL = Z +/- 1.96
+    \item 99\% CL = Z +/- 2.58
+\end{itemize}
+
+\clearpage
+
+\section{Hypothesis Testing}
+Hypothesis testing is a method used in statistical inference to validate specific assumptions made over a population parameters starting from a data sample. 
+
+The process of testing an hypothesis is the following:
+\begin{itemize}
+    \item State null and alternative hypotheses.
+    \item Determine the levels of significance.
+    \item Calculate the statistics.
+    \item Find critical values.
+    \item Determine regions of acceptance and rejections.
+    \item State the conclusion.
+\end{itemize}
+
+\subsection{Null \& Alternative Hypothesis}
+\textbf{Null hypothesis (H0)} states that no difference or relationship exists between two sets of data or variables being analyzed. 
+
+\textbf{Alternative hypothesis (H1, Ha)} states that there exists a relationship between two sets of data or variables being analyzed. 
+
+The two hypotheses are tested together. 
+
+\subsubsection{Type I and Type II Errors}
+\textbf{Type I error} is a false positive conclusion (rejecting an actually true null hypothesis). 
+Type I error is equal to the $\alpha$ probability (the percentage falling outside the level of significance). These errors mean that the results are assumed to be statistically significant while they are actually not.
+
+\textbf{Type II error} is a false negative conclusion (accepting an actually false null hypothesis). This has not to be mixed with accepting the null hypothesis. It may happens whenever the analysis has not enough statistical power to detect an effect of such a size. 
+
+Statistical power is determined by:
+\begin{itemize}
+    \item Size of the effect.
+    \item Measurement errors.
+    \item Sample size.
+    \item Significance level.
+\end{itemize}
+ 
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Null hypothesis is: & True & False \\ \hline
+&&\\[-1em]
+Rejected & \makecell {Type I Error \\ False positive \\ Probability = LOS = $\alpha$} & \makecell {Correct decision \\ True positive \\ Probability = $1-\beta$} \\ \hline
+&&\\[-1em]
+Accepted & \makecell {Correct decision \\ True negative \\ Probability = 1 - $\alpha$ } & \makecell{Type II error \\ False negative \\ Probability = $\beta$} \\
+\hline
+\end{tabular}
+\end{center}
+
+\paragraph{Tradeoff between Type I and Type II errors}\mbox{} \\
+\mbox{} \\
+Type I and Type II errors influence each other.
+\begin{itemize}
+    \item Setting a lower LOS decreases Type I but increases incidence of Type II errors.
+    \item Increasing power of a test decreases Type II but increases incidence of a Type I error.
+\end{itemize}
+
+What’s worse?
+
+The example of the innocent convicted to jail is often used to explain why - usually - Type I errors (rejecting $H0$ when it’s in fact true) may lead to worse consequences than a Type II error\footnote{Neyman, J.; Pearson, E.S. (1967) [1933]. “The testing of statistical hypotheses in relation to probabilities a priori”. Joint Statistical Papers. Cambridge University Press. pp. 186–202.}.
+
+In more general terms, we may say that: 
+\begin{itemize}
+    \item Type I errors may lead to a change in a given process, hence, to an active, wrong, action.
+    \item Type II errors may lead to overlooking an action that would have been positive. A passive point of view.
+\end{itemize}
+
+But, obviously, it depends on the context and on the scope of the analysis. 
+
+\subsection{Test Statistics}
+A test statistic is a statistic measurement (hence, a quantity derived from a sample taken from a population), specifically used in hypothesis testing. 
+
+Test statistics can be done via different methods such as t-value, z-value, F-value, $x^2$-value.
+
+Here we focus on z-test and t-test. 
+
+The choice criteria is the same as for z-scores and t-scores, with t-scores being used where the sample size is small and the population's standard deviation is unknown. 
+
+\paragraph{One-sample z-test}\mbox{} \\
+\mbox{} \\
+
+$ \displaystyle z={\frac {{\overline {x}}-\mu _{0}}{({\sigma }/{\sqrt {n}})}} $
+
+\mbox{} \\
+
+With:
+\begin{itemize}
+    \item Normal population or $n$ large) and $\sigma$ known.
+    \item $z$ being the distance from the mean in relation to the standard deviation of the mean.
+\end{itemize}
+
+\paragraph{One-sample t-test}\mbox{} \\
+\mbox{} \\
+
+$ t=\frac{\overline{x}-\mu_0} {( s / \sqrt{n} )} $ 
+
+\mbox{} \\
+
+With:
+\begin{itemize}
+    \item Normal population or $n$ large and $\sigma$ unknown.
+    \item $df = n-1$
+\end{itemize}
+
+\subsubsection{Two-Tailed and One-Tailed Tests}
+\textbf{Two-tailed test} is used whenever the estimated value can be greater or smaller than a certain range of values (for example, a target score from an exercise). 
+If the estimated value exists in the critical areas, the alternative hypothesis is accepted over the null hypothesis. 
+
+Noting that in a two-tailed test the range of rejection is equal to $\alpha/2$  (both sides of the distribution, right and left), more extreme values are needed in order to incur in a rejection of the null hypothesis. Hence, two-tailed tests are more conservative, and one should assumes to have strong evidence to state a specific direction in the hypothesis testing.
+
+\textbf{One-tailed test} is used whenever the estimated value can differ from the reference value only in one direction, greater or smaller. But not both. For example, the defective rate of a machine. 
+If the estimated value exists in one of the one-sided critical areas, depending on the direction of interest, the alternative hypothesis is accepted over the null hypothesis. 
+
+Range of rejection is equal to $\alpha$ (one side of the distribution, right or left).
+
+\subsection{P-Value and Critical Value}
+$p$-value and critical value are meant to do the same thing: support or reject the null hypothesis. 
+
+The test process will follow this roadmap:
+\begin{itemize}
+    \item State Null ($H0$) and Alternate ($Ha$) hypothesis.
+    \item Choose LOS (level of significance, $\alpha$).
+    \item Calculate test statistics from the sample.
+\end{itemize}
+
+Then, for \textbf{p-value} approach:
+\begin{itemize}
+    \item Compute $p$-value.
+    \item Compare $p$-value to alpha level.
+    \item Reject null if $p \leq alpha$ level.
+\end{itemize}
+
+And for \textbf{Critical Value} approach:
+\begin{itemize}
+    \item Find critical value.
+    \item Compare test statistics to critical value.
+    \item Reject null if the test value falls in the rejection region ($|t| <$ critical value).
+\end{itemize}
+
+
 
 
 
