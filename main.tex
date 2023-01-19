@@ -49,6 +49,9 @@
 \clearpage
 
 \section{Scope of this handbook}
+\emph{"Statistical analysis is the best way to predict events we do not know using information we do know."} 
+
+
 We are used to talking generally about mathematical skills, thinking perhaps of derivatives, integrals, theorems, and graphs of functions. 
 
 Often we do that in an abstract way, as if they were certainly logical elements, but with just specific applications. Instead, we forget that not only are mathematical elements present in every single action, but that quantitative sciences are components of everyday life.
@@ -749,8 +752,8 @@ And, consequentially: \\
 \mbox{} \\
 $P(A') = 1 - P(A)$
 
-\paragraph{Experimental and Expected probability}\mbox{} \\
-\mbox{} \\
+\subsubsection{Experimental and Expected probability}
+
 \begin{itemize}
     \item Experimental probability is the probability resulting from empirical experimentations, such as flipping a coin 100 times and recording the results in a datasheet.
     \item Expected probability is the theoretical probability coming from applying the probability formula to the scenario.
@@ -758,9 +761,18 @@ $P(A') = 1 - P(A)$
 
 The expected probability of having head over a coin toss is 50\%. However over a 100 tosses, the experimental probability may vary (ex. resulting in 30\% heads).
 
-\paragraph{Law of Large Numbers}\mbox{} \\
+\subsubsection{Law of Large Numbers}\mbox{} \\
 \mbox{} \\
 The law of large numbers, or Bernoulli's theorem (since its first formulation is due to Jakob Bernoulli), describes the behavior of the mean of a sequence of $n$ trials of a random variable, independent and characterized by the same probability distribution (n measurements of the same magnitude, $n$ tosses of the same coin, etc.), as the numerosity of the sequence itself $n$ tends to infinity.
+
+\paragraph{Regression toward the mean}\mbox{} \\
+\mbox{} \\
+Regression toward the mean (also called reversion to the mean, and reversion to mediocrity) is the phenomenon where if one sample of a random variable is extreme, the next sampling of the same random variable is more probable to be closer to its mean. 
+
+This is linked to the law of large numbers. Increasing the size of the sample and the length of the observations, the event outcomes will tend toward the population mean. 
+Law of large number is explaning the whole phenomena, while regression toward the mean is useful to understand the expected behaviour of a single observation.
+
+However, in no sense does the future event "compensate for" or "even out" the previous event. 
 
 \subsubsection{Probability Addition Rule}
 If A and B are two events in a probability experiment, then the probability that either one of the events will occur is: \\ 
@@ -2043,8 +2055,8 @@ If the estimated value exists in one of the one-sided critical areas, depending 
 Range of rejection is equal to $\alpha$ (one side of the distribution, right or left).
 
 \subsection{P-Value and Critical Value}
-$p$-value and critical value are meant to do the same thing: support or reject the null hypothesis. Both are measure of evidence against the null hypothesis. 
-The same result is then obtained following a different approach. 
+$p$-value and critical value are meant to do the same thing: support or reject the null hypothesis. Both are measure of evidence to differentiate between randomness and causality. 
+The same result is then obtained following different approaches. 
 
 The test process will follow this roadmap:
 \begin{itemize}
@@ -2072,7 +2084,8 @@ And for \textbf{Critical Value} approach:
 \textbf{P-value: compare areas}\\
 For the $p$-value approach, the likelihood ($p$-value) of the numerical value of the test statistic is compared to the specified significance level $\alpha$ of the hypothesis test.
 
-The $p$-value corresponds to the probability of observing sample data at least as extreme as the actually obtained test statistic. Small $p$-values provide evidence against the null hypothesis. The smaller (closer to 0) the $p$-value, the stronger is the evidence against the null hypothesis.\footnote{Hartmann, K., Krois, J., Waske, B. (2018): E-Learning Project SOGA: Statistics and Geospatial Data Analysis. Department of Earth Sciences, Freie Universitaet Berlin.}
+The $p$-value corresponds to the probability of observing sample data at least as extreme as the actually obtained test statistic. This means measure the statistical significance of the observations. 
+Small $p$-values provide evidence against the null hypothesis. The smaller (closer to 0) the $p$-value, the stronger is the evidence against the null hypothesis.\footnote{Hartmann, K., Krois, J., Waske, B. (2018): E-Learning Project SOGA: Statistics and Geospatial Data Analysis. Department of Earth Sciences, Freie Universitaet Berlin.}
 
 \textbf{Critical value: compare scores}\\
 It is determined whether or not the observed test statistic is more extreme than a defined critical value. Therefore the observed test statistic (calculated on the basis of sample data) is compared to the critical value, some kind of cutoff value.
@@ -2093,8 +2106,74 @@ From a practical point of view, implementing an A/B testing strategy requires gr
     \item Define a confidence interval. 
     \item Perform the experiment.
     \item Collect the results.
+    \item Assess the statistical significance of observations.
     \item Validate or reject the hypothesis made.
 \end{itemize}
+
+Common use-cases requiring A/B testing are\footnote{You may want to check this \href{https://github.com/FrancescoCasalegno/AB-Testing/blob/main/AB_Testing.ipynb}{Jupyter Notebook (link)} created by F.Casalegno, with a neat real world example}:
+\begin{itemize}
+    \item Email marketing (open rates, click-thru rates).
+    \item User Interfaces (buttons, image size, background colors).
+    \item Programming routines (APIs performances, HTTP routing).
+    \item Advertising campaign.
+\end{itemize}
+
+\clearpage
+
+\section{Regression Analysis}
+Regression analysis is a set of statistical processes for estimating the relationships between a \textbf{dependent variable} (often called the 'outcome' or 'response' variable, or a 'label' in machine learning jargon) and one or more \textbf{independent variables} (often called 'predictors', 'covariates', 'explanatory variables' or 'features').
+
+Regression analysis is primarily used for two conceptually distinct purposes:
+\begin{itemize}
+    \item First, regression analysis is widely used for prediction and forecasting, where its use has substantial overlap with the field of machine learning.
+    \item Second, in some situations regression analysis can be used to infer causal relationships between the independent and dependent variables. Importantly, regressions by themselves only reveal relationships between a dependent variable and a collection of independent variables in a fixed dataset.
+\end{itemize}
+
+Linear regression line is on the form of
+
+$y = mx + b$
+
+where:
+\begin{itemize}
+    \item $m$ is the slope.
+    \item $x$ is the independent variable.
+    \item $b$ is the intercept (the expected mean value of $y$ when all $x$=0, where the function crosses the x-axis).
+\end{itemize}
+
+To solve the linear regression function in a context where there are many possible features of $x$, such as in a prediction under uncertainty, a specific methodology is needed. 
+
+Ordinarry least squares (OLS) is one of the possible approaches.
+
+\subsection{Ordinary Least Squares (OLS)}\footnote{Minimi Quadrati Ordinari in Italian translation}
+Ordinary least squares (OLS) is a type of linear least squares method for choosing the unknown parameters in a linear regression model by the principle of least squares: minimizing the sum of the squares of the differences between the observed dependent variable (values of the variable being observed) in the given dataset and those predicted by the linear regression function.
+
+Assuming that in the case scenario the dependent and independent variables are linearly related, and impact of different variables are additive, the equation of a typical linear regression can be written as below:
+
+$\hat{y} = \beta_0 x_0 + \beta_1 x_1 + \ldots + \beta_n x_n$
+
+or, expressed as a summation:
+
+$ \displaystyle \hat{y} = \sum \limits^{n}_{i=0}{\beta_i x_i}$
+
+OLS allows us to directly solve the $y = mx + b$ equation for the slope $m$ and the intercept $b$ in a context where there are many possible features of $x$, such as in a prediction under uncertainty, hence:
+
+$ \displaystyle {y = x_1, x_2, x_3, \ldots, x_n}$
+
+Thus the linear regression function will translate to:
+
+$b = \hat{y} - m\hat{x}$
+
+$m = \displaystyle \frac{\sum(x_i - \hat{x})(y_i - \hat{y})}{\sum(x_i - \hat{x})^2}$
+
+where:
+\begin{itemize}
+    \item $x$ are the independent variables.
+    \item $\hat{x}$ is the average of the independent variables.
+    \item $y$ are the dependent variables.
+    \item $\hat{y}$ is the average of dependent variables.
+\end{itemize}
+
+
 
 
 
