@@ -80,7 +80,7 @@ Carlo, 4th of January 2023.
 
 
 \subsection{\LaTeX{} \& Open Source Repository}
-In addition to being distributed under a Free Culture CC BY 4.0 license, all materials related to this handbook are available in the GitHub repository at the link: \href{https://github.com/carloocchiena/the_statistics_handbook}.
+In addition to being distributed under a Free Culture CC BY 4.0 license, all materials related to this handbook are available in the GitHub repository at the link: \url{https://github.com/carloocchiena/the_statistics_handbook}.
 
 This also includes the \LaTeX{} source of this handbook and an Excel with several exercises and applied formulas. This could therefore also be helpful to students and those who want to use this handbook for practical purposes. 
 
@@ -228,8 +228,12 @@ For example, the first 10 students of a class or the top 3 predators from a spec
 Population and Sample are data definitions that are heavily dependent from the context.
 
 When analyzing data related to a population, it is necessary to include a statistically relevant sample. A representative sample. 
-Sample sizes are a well studied science. 
-For example 300 is a representative sample out of a population of 1000 students.
+
+In particular, identifying the sample size, knowing the size of a specific population, is critical to the significance of statistical analysis. 
+
+A numerical example of this calculation is provided in the following section: "Calculate the Sample Size from a Population".
+
+The calculation has also been exemplified on the spreadsheet made available in the GitHub repository of this handbook.
 
 Use “population” when:
 \begin{itemize}
@@ -1883,13 +1887,46 @@ The confidence level measures the level of trust\footnote{a note for Italian rea
     \item Lower confidence levels means a tighter range of values.
 \end{itemize}
 
-\subsubsection{Confidence interval and Z-scores}
+\subsubsection{Confidence Intervals and Z-scores}
 Since we already know that the most common confidence intervals are 90\%, 95\% and 99\%, we can already get confidence with the Z-values associated with such levels.
 \begin{itemize}
     \item 90\% CL = Z +/- 1.65
     \item 95\% CL = Z +/- 1.96
     \item 99\% CL = Z +/- 2.58
 \end{itemize}
+
+These values are particularly useful in estimating the sample size from a population, assuming it is following a normal distribution. 
+
+\subsubsection{Calculate the Sample Size from a Population}
+In identifying the sample size, one must make sure that it is significant for the population size and the estimated margin of error and confidence level.
+
+This dimension can be obtained by applying the properties of the normal distribution, with the following formula:
+
+$\displaystyle {n = N \frac{\frac{z^2p(1 - p)}{MOE^2}}{N - 1 + \frac{z^2p(1 - p)}{MOE^2}}}$
+
+where:
+\begin{itemize}
+    \item $N$ is the population size.
+    \item $n$ is the sample size.
+    \item $p$ is the p-value.
+    \item $z$ is the z-score for the given confidence level.
+    \item $MOE$ is the margin of error.
+\end{itemize}
+
+\textbf{Calculating Sample Size: an Example}
+\begin{itemize}
+    \item $N$ = 500
+    \item $CI$ = 95\%
+    \item $MOE$ = 2\%
+    \item $p$ = 0.5 (conservative value for unknown or uncertain scenarios).
+    \item $z$ = 1.96 (z-value associated with such CI, see previous section).
+\end{itemize}
+
+$n$ = 414 
+
+There are myriads of tools and online calculators for measuring sample size (or verifying the calculation). 
+
+Among the many, a good one is: \url{https://www.checkmarket.com/sample-size-calculator/}. 
 
 \clearpage
 
@@ -2006,7 +2043,8 @@ If the estimated value exists in one of the one-sided critical areas, depending 
 Range of rejection is equal to $\alpha$ (one side of the distribution, right or left).
 
 \subsection{P-Value and Critical Value}
-$p$-value and critical value are meant to do the same thing: support or reject the null hypothesis. 
+$p$-value and critical value are meant to do the same thing: support or reject the null hypothesis. Both are measure of evidence against the null hypothesis. 
+The same result is then obtained following a different approach. 
 
 The test process will follow this roadmap:
 \begin{itemize}
@@ -2029,8 +2067,34 @@ And for \textbf{Critical Value} approach:
     \item Reject null if the test value falls in the rejection region ($|t| <$ critical value).
 \end{itemize}
 
+\paragraph{P-value and Critical Value: a comparison}\mbox{} \\
+\mbox{} \\
+\textbf{P-value: compare areas}\\
+For the $p$-value approach, the likelihood ($p$-value) of the numerical value of the test statistic is compared to the specified significance level $\alpha$ of the hypothesis test.
 
+The $p$-value corresponds to the probability of observing sample data at least as extreme as the actually obtained test statistic. Small $p$-values provide evidence against the null hypothesis. The smaller (closer to 0) the $p$-value, the stronger is the evidence against the null hypothesis.\footnote{Hartmann, K., Krois, J., Waske, B. (2018): E-Learning Project SOGA: Statistics and Geospatial Data Analysis. Department of Earth Sciences, Freie Universitaet Berlin.}
 
+\textbf{Critical value: compare scores}\\
+It is determined whether or not the observed test statistic is more extreme than a defined critical value. Therefore the observed test statistic (calculated on the basis of sample data) is compared to the critical value, some kind of cutoff value.
+\begin{itemize}
+    \item If the test statistic is more extreme than the critical value, the null hypothesis is rejected. 
+    \item If the test statistic is not as extreme as the critical value, the null hypothesis is not rejected.
+\end{itemize}
+
+\subsection{A/B Testing}
+A/B testing has become particularly well known due to its extensive use in marketing and its declinations (product validation, UX, CTAs).
+From a statistical point of view, it can be defined as a two-sample hypothesis test (two variables that are independent of each other). 
+
+From a practical point of view, implementing an A/B testing strategy requires grounding most of skill set of a statistician:
+\begin{itemize}
+    \item Identifying the target population.
+    \item Identify a sample.
+    \item Formulate $H0$ null and $Ha$ alternative hypotheses.
+    \item Define a confidence interval. 
+    \item Perform the experiment.
+    \item Collect the results.
+    \item Validate or reject the hypothesis made.
+\end{itemize}
 
 
 
