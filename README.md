@@ -2,7 +2,12 @@
 _The statistics handbook open source repository_
 
 ## Contents of this repo
-
+- LICENSE: the license definition for this package.
+- README: the readme file.
+- Statistical Workbook: the .xlsx file with exercises and demonstrations.
+- datachart template: the .ai file with the charts and image source file.
+- main.tex: is the latex source code of the handbook.
+- z-table.xlsx: the z-table generated with an Excel formula.
 
 ## Scope of this handbook
 _"Statistical analysis is the best way to predict events we do not know using information we do know."_
