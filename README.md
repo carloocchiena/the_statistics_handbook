@@ -1,10 +1,11 @@
-# the_statistics_handbook
-the statistics handbook open source repository
+# The Statistics Handbook
+_The statistics handbook open source repository_
+
+## Contents of this repo
 
 
-\section{Scope of this handbook}
-\emph{"Statistical analysis is the best way to predict events we do not know using information we do know."} 
-
+## Scope of this handbook
+_"Statistical analysis is the best way to predict events we do not know using information we do know."_
 
 We are used to talking generally about mathematical skills, thinking perhaps of derivatives, integrals, theorems, and graphs of functions. 
 
