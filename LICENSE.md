@@ -1,0 +1,21 @@
+Attribution 4.0 International (CC BY 4.0)
+[LINK TO CREATIVE COMMONS LICENSE](https://creativecommons.org/licenses/by/4.0/)
+
+This document is distributed under a Creative Common, Free Culture, License
+
+This work was created as a means of learning and diffusion for study purposes, so I hope for its free dissemination and dissemination.
+
+While producing it, I mainly observed a two-pronged approach:
+- Maintaining the accuracy of definitions, formulas, and descriptions.
+- Describe everything with proprietary wording that does not infringe upon the intellectual property of the sources I have drawn on.
+
+For obvious reasons however, mathematical definitions are free up to a point, so where in good faith I have traced the work of licensed material I am happy to take action to remove it. 
+You can contact me at the email _____________
+
+Still moving from the initial desire to disseminate knowledge in a streamlined and unconstrained manner.
+
+This work was originally released by the author as a freely downloadable pdf. 
+
+
+Machine-readable license metadata:
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">The Statistics Handbook</span> di<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName"> Carlo Occhiena</span> è distribuito con Licenza <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribuzione 4.0 Internazionale</a>.
