@@ -4,6 +4,7 @@ _The statistics handbook open source repository_
 ## Contents of this repo
 - LICENSE: the license definition for this package.
 - README.md: the readme file.
+- The Statistics Handbook: the compiled version of the handbook.
 - Statistical Workbook.xlsx: the .xlsx file with exercises and demonstrations.
 - datachart_template.ai: the .ai file with the charts and image source file.
 - main.tex: is the latex source code of the handbook.
