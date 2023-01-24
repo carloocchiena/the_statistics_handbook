@@ -3,9 +3,9 @@ _The statistics handbook open source repository_
 
 ## Contents of this repo
 - LICENSE: the license definition for this package.
-- README: the readme file.
-- Statistical Workbook: the .xlsx file with exercises and demonstrations.
-- datachart template: the .ai file with the charts and image source file.
+- README.md: the readme file.
+- Statistical Workbook.xlsx: the .xlsx file with exercises and demonstrations.
+- datachart_template.ai: the .ai file with the charts and image source file.
 - main.tex: is the latex source code of the handbook.
 - z-table.xlsx: the z-table generated with an Excel formula.
 
