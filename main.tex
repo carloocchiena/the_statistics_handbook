@@ -70,7 +70,7 @@ Before releasing this publication, which is distributed under a Creative Common 
 
 Happy reading! 
 
-Carlo, 4th of January 2023.
+Carlo, 25th of January 2023.
 
 \subsection{Versioning \& Contributions}
 \begin{itemize}
@@ -86,6 +86,11 @@ Carlo, 4th of January 2023.
 In addition to being distributed under a Free Culture CC BY 4.0 license, all materials related to this handbook are available in the GitHub repository at the link: \url{https://github.com/carloocchiena/the_statistics_handbook}.
 
 This also includes the \LaTeX{} source of this handbook and an Excel with several exercises and applied formulas. This could therefore also be helpful to students and those who want to use this handbook for practical purposes. 
+
+\subsection{Version History}
+\begin{itemize}
+    \item 0.1 first version ever distributed; written, checked, implemented by the Author, under his liability.
+\end{itemize}
 
 \clearpage
 
@@ -207,6 +212,15 @@ Nonparametric tests should be preferred whenever the dataset is not distributed 
 
 \includegraphics[width=3cm, height=3cm]{heteroscedasticity}
 
+\paragraph{Deterministic vs Stochastic}\mbox{} \\ 
+\mbox{} \\
+A deterministic model produces, for a specific set of inputs, the same exact results. Given the inputs, the result can be predicted accurately.
+
+A stochastic model does not produce, for a specific set of inputs, a completely predictable result. The result account for a certain level of unpredictability or randomness. 
+
+Stochastic models can be analyzed statistically but may not be predicted precisely (such as Monte Carlo simulations).
+
+
 \paragraph{Linear, Nonlinear, and Monotonic Relationships}\mbox{} \\ 
 \mbox{} \\
 
@@ -274,7 +288,7 @@ $\hat{y}$: $y$ is the outcome or dependent variable in the model equation, the "
 \textbf{Inferential statistics} is a part of statistics that is used to test and validate assumptions over a dataset by analyzing a sample, using methods such as Hypothesis Testing or Regression Analysis.
 
 \subsection{Binomial Distribution}
-the binomial distribution with parameters n and p is the discrete probability distribution of the number of successes in a sequence of n independent experiments, each asking a yes–no question, and each with its own Boolean-valued outcome: success (with probability $p$) or failure (with probability $q=1-p$). 
+The binomial distribution with parameters n and p is the discrete probability distribution of the number of successes in a sequence of n independent experiments, each asking a yes–no question, and each with its own Boolean-valued outcome: success (with probability $p$) or failure (with probability $q=1-p$). 
 A single success/failure experiment is also called a Bernoulli trial. 
 A sequence of outcomes is called a Bernoulli process; for a single trial, i.e., $n = 1$, the binomial distribution is a Bernoulli distribution. 
 The binomial distribution is the basis for the popular binomial test of statistical significance.
@@ -303,9 +317,11 @@ Mean is the same concept of “average”, but average is generally used in arit
 Mean can be expressed also with symbols:\\
 $\mu$ (mu) or even with $\bar{x}$ (x bar).
 
-In the specific context of statistical studies, 
-$\bar{x}$ is used for mean over sample.\\
-$\mu$ is used for mean over the entire population.\\
+In the specific context of statistical studies:
+\begin{itemize}
+    \item $\bar{x}$ is used for mean over sample.
+    \item $\mu$ is used for mean over the entire population.
+\end{itemize}
 
 \textbf{Arithmetic Mean}
 It's the simplest and most common type of  average, expressed as the sum of all data points over the count of data points.
@@ -339,24 +355,24 @@ High and low end data points are called "outliers" (a data point that differs si
 \subsubsection{Mode}
 The mode is the value occurring most often in a dataset.
 
-$dataset = 8, 5, 4, 27, 35, 8, 29$
+$dataset = 8, 5, 4, 27, 35, 8, 29$ \\ 
 $mode = 8$
 
-$dataset = 8, 5, 4, 27, 35, 8, 29, 35$
-It’s a bi-modal dataset, mode being 35 and 8
+$dataset = 8, 5, 4, 27, 35, 8, 29, 35$ \\ 
+It’s a bi-modal dataset, mode being 35 and 8.
 
-$dataset =  5, 4, 27, 35, 8, 29$
+$dataset =  5, 4, 27, 35, 8, 29$ \\ 
 $mode = \varnothing $
 
 \subsubsection{Median}
 The median is the central value of an ordered dataset.
 
-Odd number of items dataset:\\
-16, 18, 21, 27, 32, 33, 91\\
+Odd number of items dataset: \\
+16, 18, 21, 27, 32, 33, 91 \\
 median = 27
 
-Even number of items dataset:\\
-16, 18, 21, 27, 32, 32, 33, 91\\
+Even number of items dataset: \\
+16, 18, 21, 27, 32, 32, 33, 91 \\
 median = $\frac{(27 + 32)}{2} = 29.5$ 
 
 \textbf{When to use mean, median and mode}
@@ -389,7 +405,7 @@ Variance is represented by: $\sigma ^{2}$ (sigma squared) (when referred to popu
 \subsubsection{Standard Deviation}
 Standard Deviation is the square root of Variance and it’s represented with the greek letter $\sigma$ (sigma) or the letter $s$.
 
-Being square rooted, the SD returns a value that has again the same scale of our dataset, hence allowing for better comparisons and understanding. 
+Being square rooted, the standard deviation returns a value that has again the same scale of our dataset, hence allowing for better comparisons and understanding. 
 
 Mean, Variance, and Standard Deviation, are closely linked together. 
 
@@ -408,7 +424,7 @@ Standard Deviation & $\displaystyle \sigma = \sqrt{\sigma^2}$ & $\displaystyle s
 \paragraph{Bessel's Correction}\mbox{} \\ 
 \mbox{} \\
 
-Why does sample variance have n-1 as denominator?
+Why does sample variance have$n-1$ as denominator?
 
 That’s a good question, that leads to a non-trivial answer. 
 
@@ -420,6 +436,7 @@ Let's approach the topic with an example: we have a table with 10 dice rolls; we
 How many elements can we make unknown in our dataset, without altering the goodness of the information we have?
 Only one. By eliminating the result of one die roll, we are still able to reconstruct it through the mean of the experiment and the remaining values.
 But by eliminating more than one value, we are forced to add approximation, thus invalidating the info we possess.
+
 This is why we can link Bessel correction to degrees of freedom. 
 
 \subsection{Quartiles and IQR}
@@ -1519,7 +1536,7 @@ Such questions lead to outcomes that are boolean-valued: a single bit whose valu
 
 Bernoulli distribution can be see as a specific case of binomial distribution, where:
 \begin{itemize}
-    \item Binomial distribution: n trials
+    \item Binomial distribution: $n$ trials
     \item Bernoulli distribution: one trial.
 \end{itemize}
 
@@ -1553,7 +1570,7 @@ $ \displaystyle f(k;\lambda )=\Pr(X{=}k)={\frac {\lambda ^{k}e^{-\lambda }}{k!}}
 where:
 \begin{itemize}
     \item k is the number of occurrences ($…k=0,1,2,\ldots) $.
-    \item e is Euler's number ($ e=2.71828\ldots$)
+    \item e is Euler's number ($ e=2.71828\ldots$).
     \item ! is the factorial function.
 \end{itemize}
 
@@ -2110,7 +2127,7 @@ From a practical point of view, implementing an A/B testing strategy requires gr
     \item Validate or reject the hypothesis made.
 \end{itemize}
 
-Common use-cases requiring A/B testing are\footnote{You may want to check this \href{https://github.com/FrancescoCasalegno/AB-Testing/blob/main/AB_Testing.ipynb}{Jupyter Notebook (link)} created by F.Casalegno, with a neat real world example}:
+Common use-cases requiring A/B testing are\footnote{You may want to check this \href{https://github.com/FrancescoCasalegno/AB-Testing/blob/main/AB_Testing.ipynb}{Jupyter Notebook (link)} created by F.Casalegno, with a neat real world example.}:
 \begin{itemize}
     \item Email marketing (open rates, click-thru rates).
     \item User Interfaces (buttons, image size, background colors).
@@ -2348,11 +2365,148 @@ The F test value has then to be compared on an F-table\footnote{\url{https://sta
 \clearpage
 
 \section{License}
+Attribution 4.0 International (CC BY 4.0)\footnote{\url{https://creativecommons.org/licenses/by/4.0/}}
 
+This document is distributed under a Creative Common, Free Culture, License
 
-    
-    
+This work was created as a means of learning and diffusion for study purposes, so I hope for its free dissemination and dissemination.
 
+While producing it, I mainly observed a two-pronged approach:
+\begin{itemize}
+    \item Maintaining the accuracy of definitions, formulas, and descriptions.
+    \item Describe everything with proprietary wording that does not infringe upon the intellectual property of the sources I have drawn on.
+\end{itemize}
+
+For obvious reasons however, mathematical definitions are free up to a point (and one of the goals of this work was to refer back to the canonical definitions, as further detailed in the section on) so where in good faith I have traced the work of licensed material I am happy to take action to amend it. Again starting from the premise that the purpose of this paper is not commercial but rather informative and educational. See the \textbf{Contact} section for any needs.
+
+This work was originally released by the Author as a free downloadable pdf. 
+
+\textbf{Machine-readable license metadata}:\\
+\href{<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">The Statistics Handbook</span> di<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName"> Carlo Occhiena</span> è distribuito con Licenza <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribuzione 4.0 Internazionale</a>}{This code will generate a dynamic metadata tag}.
+
+Because it is very long, it is deliberately omitted in the printed version of the handbook.
+
+\section{Source Code \& Additional Materials}
+The source of this handbook, and some additional materials can be found on an open repository on my GitHub, at the following link:
+\begin{itemize}
+    \item \url{https://github.com/carloocchiena/the_statistics_handbook}
+\end{itemize}
+
+The repository is including:
+\begin{itemize}
+    \item LICENSE: the license definition for this handbook.
+    \item README: the readme file.
+    \item The Statistics Handbook - main.pdf: this handbook.
+    \item Statistical\_Workbook.xlsx: the .xlsx file with exercises and demonstrations.
+    \item datachart\_template.ai: the .ai file with the charts and image source file.
+    \item main.tex: is the latex source code of the handbook.
+    \item z-table.xlsx: the z-table generated with an Excel formula.
+\end{itemize}
+
+\section{Bibliography \& Sources}
+This workbook was only made possible through research, consultations and studies of numerous sources. 
+
+Some of them were institutional, such as University papers and websites. 
+Others were related to the dissemination of collective knowledge, such as Wikipedia, Britannica, Khan, Youmath, Statology.
+
+Some others were related to the work of specific science spreaders such as P. Pozzolo, K.King.
+
+I have not neglected to cite even minor sources that have been helpful in finding meaningful exercises or comparing the goodness of the solutions I have devised. For example, 20-year-old forum threads.
+
+The cue is to keep exploring and DYOR (do your own research). 
+
+Happy reading!
+
+Links checked in December 2022.
+
+\textbf{Books}:
+\begin{itemize}
+    \item Gambini A., Argomenti di statistica descrittiva.
+    \item Perisco L, Di Bella E., Mosto L., Applicazioni di probabilità e statistica.
+    \item C.Gosio, Matematica Finanziaria.
+    \item A. Pascucci, W.J. Runggaldier Finanza Matematica.
+    \item S. Fiorenzani, E. Edoli, S. Ravelli, The Handbook of Energy Trading.
+\end{itemize}
+\textbf{Online sources}:
+\begin{sloppypar}
+\begin{itemize}
+    \item \url{http://www.stat.yale.edu/ }
+    \item \url{https://corporatefinanceinstitute.com/ }
+    \item \url{https://corporatefinanceinstitute.com/  }
+    \item \url{https://datascience.eu/it/matematica-e-statistica }
+    \item \url{https://imstat.org/ }
+    \item \url{https://it.scienza.matematica.narkive.com/XNiiE9wo/probabilita-di-uscita-di-un-numero-su-una-ruota-del-lotto}
+    \item \url{https://it.wikipedia.org/wiki/Statistica }
+    \item \url{https://matematica.unibocconi.it/search/node/statistica }
+    \item \url{https://math.stackexchange.com/}
+    \item \url{https://meetheskilled.com/test-di-ipotesi-one-sample-t-test/ }
+    \item \url{https://ocw.mit.edu/courses/1-151-probability-and-statistics-in-engineering-spring-2005/pages/lecture-notes/ }
+    \item \url{https://paolapozzolo.it }
+    \item \url{https://sphweb.bumc.bu.edu/otlt/MPH-Modules/PH717-QuantCore/PH717-Module9-Correlation-Regression/PH717-Module9-Correlation-Regression4.html }
+    \item \url{https://statisticsbyjim.com/hypothesis-testing/hypothesis-tests-significance-levels-alpha-p-values/}
+    \item \url{https://statology.org }
+    \item \url{https://thestatsgeek.com/ }
+    \item \url{https://www.britannica.com/browse/Mathematics }
+    \item \url{https://www.datasciencecentral.com/ }
+    \item \url{https://www.datatechnotes.com/ }
+    \item \url{https://www.geo.fu-berlin.de/ }
+    \item \url{https://www.hwupgrade.it/forum/archive/index.php/t-1294440.html }
+    \item \url{https://www.investopedia.com/math-and-statistics-4689831 }
+    \item \url{https://www.khanacademy.org/}
+    \item \url{https://www.kristakingmath.com/}
+    \item \url{https://www.matematicamente.it/forum/viewtopic.php?t=16622}
+    \item \url{https://www.scribbr.com/statistics/type-i-and-type-ii-errors/ }
+    \item \url{https://www.statisticshowto.com/ }
+    \item \url{https://www.wallstreetmojo.com/t-distribution-formula/ }
+    \item \url{https://www.westga.edu/academics/research/vrc/assets/docs/confidence_intervals_notes.pdf }
+    \item \url{https://www.youmath.it/ }
+\end{itemize}
+\end{sloppypar}
+
+\subsection{Images}
+All images used in this book were created by the author, either through a spreadsheet or a vector graphics software. 
+In any case, the source files are included in the GitHub repository.
+
+The only images drawn from the web are:
+\begin{itemize}
+    \item The violin graph.
+    \item the Gaussian with z-scores
+\end{itemize}
+
+These images appear to be part of the public domain; however, I have no problem removing them if that definition is incorrect. 
+
+\subsection{Canonical Formulas and Definitions}
+As much as I wrote every single line of that manual in my own hand, I found it counterproductive if not misleading to paraphrase mathematical formulas and definitions. 
+
+I was therefore very careful to resort to canonical definitions and formulas. 
+
+This work was done by comparing different sources, especially comparing university papers with what could be found on the Web.
+
+I think the final result is appreciable, nevertheless I consider it a possible point of discussion and improvement on which I gladly accept comparisons.
+
+\subsection{Datasets}
+A very good source of datasets ready to be used, and with a fair amount of metadata, can be found on Kaggle \url{https://www.kaggle.com/datasets}. 
+
+This has been my number one source of dataset for this handbook.
+
+Other relevant sources are:
+\begin{itemize}
+    \item \url{ https://data.gov/ }
+    \item \url{https://archive.ics.uci.edu/ml/datasets.php }
+    \item \url{https://datahub.io/collections }
+    \item \url{https://datasetsearch.research.google.com/ }
+\end{itemize}
+
+\section{Acknowledgement}
+This work was inspired by all the people who taught me love for studying and sciences. I was welcomed into their circles without prejudice, although I often came across as an ant in their presence.
+
+To all of them goes my deepest gratitude and appreciation! 
+
+\section{Contacts}
+\begin{itemize}
+    \item Linkedin: \url{https://www.linkedin.com/in/carloocchiena/} 
+    \item Twitter: \url{https://twitter.com/carloocchiena} 
+\end{itemize}
 
 \end{document}
 
