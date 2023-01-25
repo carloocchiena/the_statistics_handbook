@@ -52,7 +52,7 @@
 \emph{"Statistical analysis is the best way to predict events we do not know using information we do know."} 
 
 
-We are used to talking generally about mathematical skills, thinking perhaps of derivatives, integrals, theorems, and graphs of functions. 
+We are used to talk generally about mathematical skills, thinking perhaps of derivatives, integrals, theorems, and graphs of functions. 
 
 Often we do that in an abstract way, as if they were certainly logical elements, but with just specific applications. Instead, we forget that not only are mathematical elements present in every single action, but that quantitative sciences are components of everyday life.
 
@@ -113,32 +113,36 @@ It’s the specific characteristic being analyzed among the statistical units on
 We should not think that the data is solely a numerical value. There is a multitude of data types, each with specific characteristics. 
 
 \subsubsection{Continuous vs Discrete}
-Discrete means it can only take certain values. There are no “in-between” values. 
+\textbf{Discrete} means data can only take certain values. There are no “in-between” values. 
 
 Discrete data is the number of people: there could be 1 person or 2 people, but not 1,5 people or 0,99 people. 
-Discrete data are the possible value of rolling a die: 1,2,3,4,5,6 and not 6.5 or 1.5
+Discrete data are the possible value of rolling a dice: 1,2,3,4,5,6 and not 6.5 or 1.5
 
-Continuous means there is an infinite amount of value in between each data point.
+\textbf{Continuous} means there is an infinite amount of value in between each data point.
 
 Continuous data is the height or weight of a person.
 Continuous data are temperature records. 
  
 \subsubsection{Nominal vs Ordinal}
-Nominal data is classified without a natural order or rank. Nominal data can’t be clearly sorted. 
+\textbf{Nominal} data is classified without a natural order or rank. Nominal data can’t be clearly sorted. 
 Nominal data can’t be “ordered” (from which the term “ordinal”).
 
-Nominal data are animal species: lizard, dog, cat, or the list of ingredients on a recipe.
+Nominal data are animal species: lizard, dog, cat. The list of ingredients on a recipe.
 
-Ordinal data is data that has a natural order or rank. 
+\textbf{Ordinal} data is data that has a natural order or rank. 
+
 Ordinal data can be sorted and ordered. 
 Ordinal data doesn’t have to be numeric. For example, hot, mild, cold - or even top, low, bottom, can be data attributes that can be ordered and then being considered ordinal. 
+
 Ordinal data are the seat numbers on a train. 
 
 \subsubsection{Structured vs Unstructured}
-Structured data is highly specific and stored in a predefined format. It has its own structure.
+\textbf{Structured} data is highly specific and stored in a predefined format. It has its own structure.
+
 Examples are JSON or Excel files, SQL databases. 
 
-Unstructured data is data that does not have a specific or well defined format. 
+\textbf{Unstructured} data is data that does not have a specific or well defined format. 
+
 Unstructured data are audio data, text data, video data. 
 
 Do not confuse “file format” with “formatted data”. 
@@ -188,7 +192,7 @@ Quantitative data can be further classified in:
 
 \textbf{Parametric}
 \begin{itemize}
-    \item Parametric assume the presence of distributions of approximately normal type.
+    \item Parametric assumes the presence of distributions of approximately normal type.
     \item They involve continuous or interval-type variables and a fairly large sample size.
     \item They assume homogeneity of variances (homoscedasticity).
     \item They assume estimation of parametric data such as mean, variance and standard deviation.
@@ -214,12 +218,21 @@ Nonparametric tests should be preferred whenever the dataset is not distributed 
 
 \paragraph{Deterministic vs Stochastic}\mbox{} \\ 
 \mbox{} \\
-A deterministic model produces, for a specific set of inputs, the same exact results. Given the inputs, the result can be predicted accurately.
+A \textbf{deterministic} model produces, for a specific set of inputs, the same exact results. Given the inputs, the result can be predicted accurately.
 
-A stochastic model does not produce, for a specific set of inputs, a completely predictable result. The result account for a certain level of unpredictability or randomness. 
+A \textbf{stochastic} model does not produce, for a specific set of inputs, a completely predictable result. The result account for a certain level of unpredictability or randomness. 
 
 Stochastic models can be analyzed statistically but may not be predicted precisely (such as Monte Carlo simulations).
 
+\paragraph{Expected Value}\mbox{} \\ 
+\mbox{} \\
+The expected value (also called expectation, expectancy, mathematical expectation, mean, average) is a generalization of the weighted average. 
+
+Informally, the expected value is the arithmetic mean of a large number of independently selected outcomes of a random variable.
+
+The expected value of a random variable with a finite number of outcomes is a weighted average of all possible outcomes. In the case of a continuum of possible outcomes, the expectation is defined by integration.
+
+The expected value of a random variable $X$ is often denoted by $E(X)$, $E[X]$, or $EX$, with $E$ also often stylized as \emph{E} or $\mathbb{E}$. 
 
 \paragraph{Linear, Nonlinear, and Monotonic Relationships}\mbox{} \\ 
 \mbox{} \\
@@ -229,7 +242,7 @@ When variables increase or decrease concurrently and at a constant rate, a posit
 When one variable increases while the other variable decreases, a negative linear relationship exists.
 
 \textbf{Nonlinear}: \\
-If a relationship between two variables is not linear, the rate of increase or decrease can change as one variable changes, causing a "curved pattern" in the data.
+If a relationship between two variables is not linear, the rate of increase or decrease can change as one variable changes, causing a “curved pattern” in the data.
 
 \textbf{Monotonic}: \\
 In a monotonic relationship, the variables tend to move in the same relative direction, but not necessarily at a constant rate.
@@ -248,7 +261,7 @@ When analyzing data related to a population, it is necessary to include a statis
 
 In particular, identifying the sample size, knowing the size of a specific population, is critical to the significance of statistical analysis. 
 
-A numerical example of this calculation is provided in the following section: "Calculate the Sample Size from a Population".
+A numerical example of this calculation is provided in the following section: “Calculate the Sample Size from a Population”.
 
 The calculation has also been exemplified on the spreadsheet made available in the GitHub repository of this handbook.
 
@@ -288,9 +301,11 @@ $\hat{y}$: $y$ is the outcome or dependent variable in the model equation, the "
 \textbf{Inferential statistics} is a part of statistics that is used to test and validate assumptions over a dataset by analyzing a sample, using methods such as Hypothesis Testing or Regression Analysis.
 
 \subsection{Binomial Distribution}
-The binomial distribution with parameters n and p is the discrete probability distribution of the number of successes in a sequence of n independent experiments, each asking a yes–no question, and each with its own Boolean-valued outcome: success (with probability $p$) or failure (with probability $q=1-p$). 
+The binomial distribution with parameters $n$ and $p$ is the discrete probability distribution of the number of successes in a sequence of $n$ independent experiments, each asking a yes–no question, and each with its own Boolean-valued outcome: success (with probability $p$) or failure (with probability $q=1-p$). 
 A single success/failure experiment is also called a Bernoulli trial. 
+
 A sequence of outcomes is called a Bernoulli process; for a single trial, i.e., $n = 1$, the binomial distribution is a Bernoulli distribution. 
+
 The binomial distribution is the basis for the popular binomial test of statistical significance.
 
 \subsubsection{Binomial Coefficient}
@@ -298,7 +313,7 @@ Binomial Coefficient is a natural number as defined starting from a pair of natu
 Binomial Coefficient represents the number of sub-groups of $k$ elements that could be made out of a dataset of $n$ objects.
 
 \subsection{Measurement of Central Tendency}
-\textbf{Central tendency} is defined as “the statistical measure that identifies a single value as representative of an entire distribution.” It aims to provide an accurate description of the entire data. It is the single value that is most typical/representative of the collected data.
+\textbf{Central tendency} is defined as “the statistical measure that identifies a single value as representative of an entire distribution.” It aims to provide an accurate description of the entire data. It is the single value that is most typical, or representative, of the collected data.
 
 \subsubsection{Mean}
 Mean is generically expressed as:
@@ -312,21 +327,21 @@ ${\displaystyle {\bar{x}}={\frac{1}{n}}\left(\sum _{i=1}^{n}{x_{i}}\right)={\fra
 
 \mbox{} \\
 
-Mean is the same concept of “average”, but average is generally used in arithmetic, while “mean” is expressingly considering the central point among a dataset in statistics. Arithmetic Mean is equal to average, while Harmonic or Geometric Mean have different meanings. 
+Mean hass the same meaning of “average”, but average is generally used in arithmetic, while “mean” is expressingly considering the central point among a dataset in statistics. Arithmetic Mean is equal to average, while Harmonic or Geometric Mean have different meanings. 
 
 Mean can be expressed also with symbols:\\
 $\mu$ (mu) or even with $\bar{x}$ (x bar).
 
 In the specific context of statistical studies:
 \begin{itemize}
-    \item $\bar{x}$ is used for mean over sample.
-    \item $\mu$ is used for mean over the entire population.
+    \item $\bar{x}$ is used for mean of a  sample.
+    \item $\mu$ is used for mean of the entire population.
 \end{itemize}
 
-\textbf{Arithmetic Mean}
+\textbf{Arithmetic Mean} \\
 It's the simplest and most common type of  average, expressed as the sum of all data points over the count of data points.
 
-\textbf{Weighted Mean}
+\textbf{Weighted Mean} \\ 
 It's similar to the arithmetic mean, except the fact that each of the data point contributes to the computation with its own weight factor.
 
 $ \displaystyle \mu(x) = \frac{\sum \limits ^{k} _{i=1} x_i * n_i}{N}$
@@ -346,11 +361,12 @@ Apple (n) & Weight (g) \\ \hline
 
 The weighted mean would be then: $\frac{((8*200)+(3*250)+(8*100))}{(8+3+8)} = 165.75$ grams.  
 
-\textbf{Truncated Mean}
+\textbf{Truncated Mean} \\ 
 A truncated mean or trimmed mean is a statistical measure of central tendency, much like the mean and median. It involves the calculation of the mean after discarding given parts of a probability distribution or sample at the high and low end, and typically discarding an equal amount of both. 
+
 This number of points to be discarded is usually given as a percentage of the total number of points, but may also be given as a fixed number of points.
 
-High and low end data points are called "outliers" (a data point that differs significantly from other observations).
+High and low end data points are called “outliers” (a data point that differs significantly from other observations).
 
 \subsubsection{Mode}
 The mode is the value occurring most often in a dataset.
@@ -369,11 +385,11 @@ The median is the central value of an ordered dataset.
 
 Odd number of items dataset: \\
 16, 18, 21, 27, 32, 33, 91 \\
-median = 27
+$median$ = 27
 
 Even number of items dataset: \\
 16, 18, 21, 27, 32, 32, 33, 91 \\
-median = $\frac{(27 + 32)}{2} = 29.5$ 
+$median$ = $\frac{(27 + 32)}{2} = 29.5$ 
 
 \textbf{When to use mean, median and mode}
 
@@ -392,22 +408,24 @@ DATASET & MEAN & MEDIAN & MODE \\ \hline
 \end{center}
 
 \subsection{Measurement of Dispersion}
-Measures of dispersion can be defined as positive real numbers that measure how homogeneous or heterogeneous the given data is. 
+Measurement of dispersion can be defined as positive real numbers that measure how homogeneous or heterogeneous the given data is. 
 
-The most common measurements of dispersion are Variance and Standard Deviation. 
+The most common measurement of dispersion are Variance and Standard Deviation. 
 
 \subsubsection{Variance}
-Variance represents the positive distance from a single datapoint for the mean of the dataset. The positive distance is made thanks to the exponential factor applied to the distance of each datapoint. 
-The exponential factor also magnifies values that are more far from the mean in respect to smaller values, allowing to better understand their impact on the dataset. 
+Variance is the expectation of the squared deviation of a random variable from its population mean or sample mean. Variance is a measure of dispersion, meaning it is a measure of how far a set of numbers is spread out from their average value. 
+
+The always-positive value of variance is made thanks to the exponential factor applied to the distance of each datapoint. 
+The exponential factor also magnifies values that are more far from the mean in respect to smaller values, allowing to a better understanding of their impact on the dataset. 
 
 Variance is represented by: $\sigma ^{2}$ (sigma squared) (when referred to population), ${\displaystyle s^{2}}$ (when referred to sample), ${\displaystyle \operatorname {Var} (X)}, {\displaystyle V(X)}, or {\displaystyle \mathbb {V} (X)}$
 
 \subsubsection{Standard Deviation}
-Standard Deviation is the square root of Variance and it’s represented with the greek letter $\sigma$ (sigma) or the letter $s$.
+Standard deviation is a measure of the amount of variation or dispersion of a set of values. Standard deviation is equal to the square root of variance and it’s represented with the Greek letter $\sigma$ (sigma) or the letter $s$.
 
-Being square rooted, the standard deviation returns a value that has again the same scale of our dataset, hence allowing for better comparisons and understanding. 
+Being square rooted, the standard deviation returns a value that has again the same scale of the initial dataset, hence allowing for better comparisons and understanding of the statistics. 
 
-Mean, Variance, and Standard Deviation, are closely linked together. 
+Mean, Variance, and Standard Deviation, are closed linked together. 
 
 \begin{center}
 \begin{tabular}{|m{2cm}|c|c|}
@@ -424,23 +442,23 @@ Standard Deviation & $\displaystyle \sigma = \sqrt{\sigma^2}$ & $\displaystyle s
 \paragraph{Bessel's Correction}\mbox{} \\ 
 \mbox{} \\
 
-Why does sample variance have$n-1$ as denominator?
+Why does sample variance have $n-1$ as denominator?
 
 That’s a good question, that leads to a non-trivial answer. 
 
-From a mathematical point of view, the -1 correction factor is called Bessel’s correction and it’s used to correct the tendency (that can be demonstrate mathematically or even empirically with a relatively small number of experiment over a dataset) that the biased estimator has a tendency to undershoot (and never to overshoot) the parameter being estimated.  
+From a mathematical point of view, the -1 correction factor is called Bessel’s correction and it’s used to correct the tendency (that can be demonstrate mathematically or even empirically with a relatively small number of experiment over a dataset) that the biased estimator has to undershoot (and never to overshoot) the parameter being estimated.  
 
-It is possible to think of the Bessel correction as the degrees of freedom of the vector of residuals. When the sample standard deviation is calculated from a sample of n values, sample mean is used which has already been calculated from that same sample of n values. The calculated sample mean has already taken into account one of the degrees of freedom of variability (which is the mean itself) that is available in the sample.
+It is possible to think of the Bessel's correction as the degrees of freedom of the vector of residuals. When the sample standard deviation is calculated from a sample of $n$ values, sample mean is used which has already been calculated from that same sample of $n$ values. The calculated sample mean has already taken into account one of the degrees of freedom of variability (which is the mean itself) that is available in the sample.
 
 Let's approach the topic with an example: we have a table with 10 dice rolls; we know the result of each die, the overall average of the dataset.
 How many elements can we make unknown in our dataset, without altering the goodness of the information we have?
 Only one. By eliminating the result of one die roll, we are still able to reconstruct it through the mean of the experiment and the remaining values.
 But by eliminating more than one value, we are forced to add approximation, thus invalidating the info we possess.
 
-This is why we can link Bessel correction to degrees of freedom. 
+This is why we can link Bessel's correction to degrees of freedom. 
 
 \subsection{Quartiles and IQR}
-In statistics, a quartile is a type of quantile which divides the number of data points into four parts, or quarters, of more-or-less equal size. The data must be ordered from smallest to largest to compute quartiles; as such, quartiles are a form of order statistic. 
+A quartile is a type of quantile (quantiles are values that split sorted data or a probability distribution into equal parts) which divides the number of data points into four parts, or quarters, of more-or-less equal size. The data must be ordered from smallest to largest to compute quartiles; as such, quartiles are a form of order statistic. 
 
 \textbf{Quartiles:}
 \begin{itemize}
@@ -542,13 +560,13 @@ It is used to show trend data, or the comparison of two data sets.
 
 \includegraphics[width=3cm, height=3cm]{line_chart}
 
-\subsection{Dot Plot}\footnote{In some texts, also called Line Plot.}
-Dot plot is a way to display data frequency piled over data points and along a number line. 
+\subsection{Dot Plot}
+Dot plot\footnote{In some texts, also called Line Plot.} is a way to display data frequency piled over data points and along a number line. 
 
 \includegraphics[width=3cm, height=3cm]{dot_plot}
 
 \subsection{Histograms}
-A histogram is a bar chart that groups continuous data into ranges. Ranges are discretional to the creator of the chart. For example, overall user ages (continuous dataset) can be grouped in clusters such as 0-10, 10-20 and such.
+A histogram is a bar chart that groups continuous data into ranges. Ranges are discretional to the creator of the chart. For example, overall user ages (continuous dataset) can be grouped in clusters such as 0-10, 11-20 and such.
 
 Histogram bars are adjacent (no spaces between bars).
 
@@ -565,16 +583,16 @@ Correctly labeling horizontal ($X$) axis of an histogram chart is important in o
 \subsection{Bar Plot}
 Bar plots are usually used to display categorical data along the horizontal axis. That is, discrete data such as products, countries, car types and such. 
 
-Bar within a bar chart are not adjacent. Data on the bar plots are often ordered, in order to enhance chart comprehension. 
+Bars within a bar chart are not adjacent. Data on the bar plots are often ordered, in order to enhance chart comprehension. 
 
 \includegraphics[width=3cm, height=3cm]{bar_chart}
 
 \subsection{Ogive}
-An ogive (oh-jive), sometimes called a cumulative frequency chart, is a type of frequency chart that shows cumulative frequencies. In other words, the cumulative percentages are added on the graph from left to right.
+An ogive, sometimes called a cumulative frequency chart, is a type of frequency chart that shows cumulative frequencies. In other words, the cumulative percentages are added on the graph from left to right.
 
 An ogive graph plots cumulative frequency on the y-axis and class boundaries along the x-axis. It’s very similar to a histogram, only instead of rectangles, an ogive has a single point marking where the top right of the rectangle would be. 
 
-It is usually easier to create this kind of graph from a frequency table
+It is usually easier to create this kind of graph from a frequency table.
 
 \includegraphics[width=3cm, height=3cm]{ogive_chart}
 
@@ -587,8 +605,9 @@ BWP are also called: box plot, box and whisker diagram, box and whisker plot wit
 
 \paragraph{Box and whisker vs candlestick chart}\mbox{} \\
 \mbox{} \\
-Mathematically speaking there is no difference. Both show an upper and lower boundary and points outside these boundaries. However:
-A candlestick chart is mainly used in the finance industry. Its most popular application is to show share price. It is mainly used in the vertical position.
+Mathematically speaking there is no difference. Both show an upper and lower boundary and points outside these boundaries. 
+
+However,a candlestick chart is mainly used in the finance industry. Its most popular application is to show stock prices. It is mainly used in the vertical position.
 
 A  box and whisker chart tends to be used in non-finance industries. For example, the level of sales of various stores or inventory levels etc. The box and whisker can be shown horizontally as well as vertically. They are often found with labels showing various statistical informations. 
 
@@ -599,7 +618,7 @@ A violin plot is a method of plotting numeric data. It is similar to a box plot,
 
 \subsection{KDE Plot}
 
-KDE Plot described as Kernel Density Estimate is used for visualizing the Probability Density of a continuous variable. It depicts the probability density at different values in a continuous variable. We can also plot a single graph for multiple samples which helps in more efficient data visualization.
+KDE Plot described as Kernel Density Estimate is used for visualizing the probability density of a continuous variable. It depicts the probability density at different values in a continuous variable. We can also plot a single graph for multiple samples which helps in more efficient data visualization.
 Kernel density estimates are closely related to histograms, but can be endowed with properties such as smoothness or continuity by using a suitable kernel.
 
 \includegraphics[width=5cm, height=3cm]{kde_chart}
@@ -653,17 +672,18 @@ Usually permutations refer to all the possible arrangements (all the possible pe
 
 Permutations are calculated as factorials $(n!)$
 
-Permutations are relevant when working with numbers, since "575" is not equal to "577" nor "557".
+Permutations are relevant when working with numbers, since “575” is not equal to “577” nor “557”.
 
 \subsection{Combinations}
 A combination is a selection of items from a set that has distinct members, such that the order of selection does not matter (unlike permutations). 
+
 For example, given three fruits, say an apple, an orange and a pear, there are three combinations of two that can be drawn from this set: 
 \begin{itemize}
     \item an apple and a pear;
     \item an apple and an orange;
     \item a pear and an orange.
 \end{itemize} 
-Combinations \textbf{is an unordered selection} of objects from a set of objects.
+Combination \textbf{is an unordered selection} of objects from a set of objects.
 
 More formally, a $k-combination$ of a set $S$ is a subset of $k$ distinct elements of $S$.
 
@@ -691,13 +711,13 @@ Dispositions & $\displaystyle n^k$ & $\displaystyle \frac{n!}{(n - k)!}$ \\[25pt
 \paragraph{Examples}\mbox{} \\
 \mbox{} \\
 \textbf{Permutations with repetitions} \\ 
-How many phone numbers of 7 digits can we generate using all the numbers from 0 to 9, allowing every specific case (such as "all zeros" being a valid number)?
+How many phone numbers of 7 digits can we generate using all the numbers from 0 to 9, allowing every specific case (such as “all zeros” being a valid number)?
 
 $n = \text{[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]} = 10$ \\
-$k = \_ \_ \_ \_ \_ \_ \_ = 7$ \\ 
+$k = \_, \_, \_, \_, \_, \_, \_ = 7$ \\ 
 Each slot of k allows 10 combinations, so it’s $n^k = 10^7$
 
-\textbf{Permutations with no repetitions example} \\
+\textbf{Permutations with no repetitions} \\
 Find all the way the word MAMA can be arranged. 
 
 n = 3 \\ 
@@ -738,15 +758,15 @@ Probability is the branch of mathematics that deals with how likely an event is 
 \hline
 $P(A)$ & Individual probability & The probability of event $A$ happening \\ \hline
 &&\\[-1em]
-$P(A')$ & Complement & The probability of event A not happening \\ \hline
+$P(A')$ & Complement & The probability of event $A$ not happening \\ \hline
 &&\\[-1em]
-$P(A')$ & Complement & The probability of event A not happening \\ \hline
+$P(A')$ & Complement & The probability of event $A$ not happening \\ \hline
 &&\\[-1em]
-$P(A \cup B)$ & Union & \makecell{The probability of both A and B happening for both datasets \\ (all elements of A plus all elements of B).} \\ \hline
+$P(A \cup B)$ & Union & \makecell{The probability of both $A$ and $B$ happening for both datasets \\ (all elements of $A$ plus all elements of $B$).} \\ \hline
 &&\\[-1em]
-$P(A \cap B)$ & Union & \makecell{The probability of both A and B happening for both datasets \\ (all elements of A plus all elements of B).} \\ \hline
+$P(A \cap B)$ & Union & \makecell{The probability of both $A$ and $B$ happening for both datasets \\ (all elements of $A$ plus all elements of $B$).} \\ \hline
 &&\\[-1em]
-$P(A | B)$ & Dependent & The probability of A given that B has occurred. \\
+$P(A | B)$ & Dependent & The probability of $A$ given that $B$ has occurred. \\
 \hline
 \end{tabular}
 \end{center}
@@ -778,8 +798,7 @@ $P(A') = 1 - P(A)$
 
 The expected probability of having head over a coin toss is 50\%. However over a 100 tosses, the experimental probability may vary (ex. resulting in 30\% heads).
 
-\subsubsection{Law of Large Numbers}\mbox{} \\
-\mbox{} \\
+\subsubsection{Law of Large Numbers}
 The law of large numbers, or Bernoulli's theorem (since its first formulation is due to Jakob Bernoulli), describes the behavior of the mean of a sequence of $n$ trials of a random variable, independent and characterized by the same probability distribution (n measurements of the same magnitude, $n$ tosses of the same coin, etc.), as the numerosity of the sequence itself $n$ tends to infinity.
 
 \paragraph{Regression toward the mean}\mbox{} \\
@@ -789,7 +808,7 @@ Regression toward the mean (also called reversion to the mean, and reversion to 
 This is linked to the law of large numbers. Increasing the size of the sample and the length of the observations, the event outcomes will tend toward the population mean. 
 Law of large number is explaning the whole phenomena, while regression toward the mean is useful to understand the expected behaviour of a single observation.
 
-However, in no sense does the future event "compensate for" or "even out" the previous event. 
+However, in no sense does the future event “compensate for” or “even out” the previous event. 
 
 \subsubsection{Probability Addition Rule}
 If A and B are two events in a probability experiment, then the probability that either one of the events will occur is: \\ 
@@ -805,7 +824,7 @@ $P(A \cup B) = P(A)+P(B)−P(A \cap B)$
 If A and B are two mutually exclusive events, \\ 
 $P(A \cap B) = 0$. Then the probability that either one of the events will occur is: \\
 \mbox{} \\
-$P(A or B)=P(A)+P(B)$ \\
+P(A or B)=P(A)+P(B) \\
 \mbox{} \\
 Or, with sets notation as: \\ 
 \mbox{} \\
@@ -828,7 +847,7 @@ $P(A \cup B)=P(A) + P(B)$ \\
 
 \subsubsection{Conditional Probability for Independent and Dependent Events}
 \textbf{Independent event probability} \\ 
-The probability of A and B happening. \\
+The probability of $A$ and $B$ happening. \\
 \mbox{} \\
 $P(A \cap B) = P(A) * P(B)$ \\ 
 \mbox{} \\
@@ -844,7 +863,7 @@ $P(A \cap B \cap  C) = 2 / 100 * 2 / 100 * 2 / 100 = \frac{8}{100^3} = 1 / \text
 \mbox{} \\
 \textbf{Dependent event probability}
 \mbox{} \\
-The probability of A and B, given that A has already occurred. \\ 
+The probability of $A$ and $B$, given that $A$ has already occurred. \\ 
 \mbox{} \\
 $P(A \cap B) = P(A) * P(B | A)$ \\ 
 \mbox{} \\
@@ -854,14 +873,14 @@ $P(A \cap B) = 4 / 52 * 3 / 51  = 1 / 13 * 1 / 17 = 1 / 221$
 
 \textbf{Reminder}
 
-If $P(B) = P(B | A)$ then the events must be independent.
+If $P(B) = P(B | A)$, then the events must be independent.
 
 \subsection{Bayes Theorem}
 Bayes' theorem describes the probability of an event, based on prior knowledge of conditions that might be related to the event. 
 
 $\displaystyle P(A\mid B)={\frac {P(B\mid A)P(A)}{P(B)}}$ \\ 
 
-Where: 
+where: 
 \begin{itemize}
     \item $A$ and $B$ are events and $P(B) \neq 0 $.
     \item $P(A)$ is the probability of event $A$.
@@ -870,7 +889,7 @@ Where:
     \item $P(B | A)$ is the probability of observing event $B$ if $A$ is true.
 \end{itemize}
 
-\paragraph{Example 1.}\mbox{} \\
+\paragraph{Example 1}\mbox{} \\
 \mbox{} \\
 We have two assembly lines, 1 and 2. \\ 
 Line 1 has a defective rate of 3\%, Line 2 of 1\%. \\ 
@@ -894,7 +913,7 @@ Applying Bayes Theorem, then:
 
 $P(A | B) = [(3 / 100) * (1 / 2)] / (1 / 50) = (3 / 200) / (1 / 50) = (3 / 200) * (50 / 1) = 150 / 200 = 3 / 4 = 75\% $
 
-\paragraph{Example 2.}\mbox{} \\
+\paragraph{Example 2}\mbox{} \\
 \mbox{} \\
 You’re tested for a disease that occurs 1 out of 1’000 people. \\ 
 Test accuracy is 99\%. \\ 
@@ -938,7 +957,7 @@ $P(A|B)$ = probability of being sick having a positive test = $10.98 / 0.99$ (or
 
 \subsubsection{Tree Diagrams}
 A tree diagram is a type of diagram that can be useful as an aid in computing probabilities. \\ 
-For example, consider an experiment of tossing a six-sided die. Each
+For example, consider an experiment of tossing a six-sided dice. Each
 time the experiment is repeated, the probability of obtaining a 1 (event ) is $P(A) = 1 / 6$. 
 If you are only concerned with whether the number is 1 or not 1, and the experiment is repeated three times, then eight different sequences of events are possible. \\ 
 The tree diagram below shows the probabilities of these eight sequences of events.
@@ -951,14 +970,14 @@ This is in contrast to a continuous distribution, where outcomes can fall anywhe
 
 Common examples of discrete distribution include the binomial, Poisson, and Bernoulli distributions.
 
-\textbf{Example of of discrete probability}
+\textbf{Example of of discrete probability} \\
 What is the probability of having head out of 3 coin flips?
 \begin{itemize}
     \item Number of variable: 2 (head or tail).
     \item Number of events: 3 flips.
     \item Total number of combinations: $2^3 = 8$
 \end{itemize}
-
+va
 Possible outcomes: \\ 
 \begin{center}
 \begin{tabular}{|c|c|}
