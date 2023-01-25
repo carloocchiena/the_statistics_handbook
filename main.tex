@@ -977,7 +977,7 @@ What is the probability of having head out of 3 coin flips?
     \item Number of events: 3 flips.
     \item Total number of combinations: $2^3 = 8$
 \end{itemize}
-va
+
 Possible outcomes: \\ 
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -1129,10 +1129,10 @@ Variance & $\sigma^2 = \sigma^2 x + \sigma^2 y$ & $\sigma^2 = \sigma^2 x + \sigm
 
 \textbf{Example:}
 Time in hours 4 managers manage timesheets: \\ 
-X = [1, 2, 2, 3] \\ 
+$X$ = [1, 2, 2, 3] \\ 
 \mbox{} \\
 Time in hours 4 HRs manages payrolls on such timesheets: \\ 
-Y = [2, 3, 5, 6] \\ 
+$Y$ = [2, 3, 5, 6] \\ 
 \mbox{} \\
 
 $\mu X$ = (1 + 2 + 2 + 3) / 4 = 2 \\
@@ -1166,10 +1166,15 @@ A fair game\footnote{Italian translation: gioco equo} is a game (a bet, as an ex
 
 $W = B/p = 1$ 
 \mbox{} \\
-Where:
-$W$ = win
-$B$ = Bet
-$p$ = probability
+where:
+\begin{itemize}
+    \item $W$ = win.
+    \item $B$ = Bet.
+    \item $p$ = probability
+\end{itemize}
+
+
+
 
 \textbf{Is state lottery a fair game?}\\ 
 The Italian national lottery (“Lotto”) is a bingo where 5 numbers are drawn out of a poll of 90. Repetition is not allowed (extracted numbers are discarded)\footnote{\url{https://www.lotto-italia.it/lotto/come-dove-giocare/il-gioco/premi-del-lotto}}. 
@@ -1195,9 +1200,11 @@ Fair game will assume:
 $W = B/p = 1$
 
 But we have:
-W = 6’000’000
-B = 1
-p = 0.00000228\%
+\begin{itemize}
+    \item W = 6’000’000
+    \item B = 1
+    \item p = 0.00000228\%
+\end{itemize}
 
 $W = B/p$ = 1 / 0.00000228\% = 43’949’268
 
@@ -1233,10 +1240,10 @@ A \textbf{neutral covariance} means that the variables have no relations with ea
 Expressed in mathematical notation, covariance formulas are:
 
 \textbf{Population Covariance}: \\ 
-$\displaystyle cov(x, y) = \frac{1}{n}\sum \limits_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})$
+$\displaystyle cov(X, Y) = \frac{1}{N}\sum \limits_{i=1}^N (X_i - \bar{X})(Y_i - \bar{Y})$
 
 \textbf{Sample Covariance}: \\ 
-$\displaystyle cov(X, Y) = \frac{1}{N-1}\sum \limits_{i=1}^N (X_i - \bar{X})(Y_i - \bar{Y})$
+$\displaystyle cov(x, y) = \frac{1}{n-1}\sum \limits_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})$
 
 \subsection{Correlation}
 Correlation is a metric used to measure the \textbf{strength} of a  statistical relationship between two random variables. It’s also called a \textbf{measure} of relationship.
@@ -1278,8 +1285,9 @@ Pearson correlation assumptions:
 \end{itemize}
 
 \textbf{For a population}\\
-Pearson correlation is expressed with the greek letter $\rho$ (rho) when referred to population.
-Given a pair of random variables $(X,Y)$, the formula for $\rho$is:
+Pearson correlation is expressed with the Greek letter $\rho$ (rho) when referred to population.
+
+Given a pair of random variables $(X,Y)$, the formula for $\rho$ is:
 
 $\displaystyle \rho _{X,Y}={\frac{cov(X,Y)}{\sigma _{X}\sigma _{Y}}}$
 
@@ -1293,6 +1301,7 @@ where:
 \textbf{For a sample}\\
 Pearson's correlation coefficient, when applied to a sample, is commonly represented by $r_{xy}$ and may be referred to as the sample correlation coefficient or the sample Pearson correlation coefficient. 
 We can obtain a formula for $r_{xy}$ by substituting estimates of the covariances and variances based on a sample into the formula above. 
+
 Given paired data $\displaystyle \{(x_{1},y_{1}),\ldots ,(x_{n},y_{n})\}$ consisting of $n$ pairs, $r_{xy}$ is defined as:
 
 $\displaystyle r_{xy}={\frac {\sum _{i=1}^{n}(x_{i}-{\bar {x}})(y_{i}-{\bar {y}})}{{\sqrt {\sum _{i=1}^{n}(x_{i}-{\bar {x}})^{2}}}{\sqrt {\sum _{i=1}^{n}(y_{i}-{\bar {y}})^{2}}}}}$
@@ -1315,7 +1324,7 @@ This formula suggests a convenient single-pass algorithm for calculating sample 
 \subsubsection{Kendall Rank Correlation}
 Kendall rank correlation is a non-parametric test that measures the strength of dependence between two quantitative or qualitative ordinal statistical variables. 
 
-Kendall rank correlation is expressed with greek letter $\tau$ (tau)
+Kendall rank correlation is expressed with Greek letter $\tau$ (tau)
 
 $\displaystyle \tau = \frac{n_c - n_d}{n_c + n_d} = \frac{n_c - n_d}{n(n - 1)/2}$
 
@@ -1334,9 +1343,10 @@ Kendall rank assumptions:
 \end{itemize}
 
 \subsubsection{Spearman Rank Correlation}
-Spearman rank is a non parametric measure of rank correlation (measure of statistical dependence between the rankings of two variables). Spearman rank is also defined as the Pearson correlation between the rank variables.
+Spearman rank is a non parametric measure of rank correlation (measure of statistical dependence between the rankings of two variables). 
+Spearman rank is also defined as the Pearson correlation between the rank variables.
 
-Spearman rank is denoted with same greeks as Pearson, $\rho$ and $r$.
+Spearman rank is denoted with same Greeks as Pearson, $\rho$ and $r$.
 
 For a sample of size $n$, the $n$ raw scores $ X_{i},Y_{i}$ are converted to ranks ${R} ({X_{i}}), {R} ({Y_{i}})$, and $ r_{s}$ is computed as:
 
@@ -1418,7 +1428,7 @@ with:
     
 \end{itemize}
 
-More technically, In a continuous distribution (e.g. continuous uniform, normal, and others), the probability is calculated by integration, as an area under the probability density function.
+More technically, in a continuous distribution (e.g. continuous uniform, normal, and others), the probability is calculated by integration, as an area under the probability density function.
 
 For $f(x)$ to be a legitimate PDF, it must satisfy the following two conditions:
 \begin{itemize}
