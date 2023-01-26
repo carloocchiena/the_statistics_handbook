@@ -1416,7 +1416,7 @@ Discrete uniform distribution refers to discrete events where all the events hav
 
 \subsection{Probability Density Function (PDF)}
 
-In probability theory, a probability density function (PDF), or density of a \textbf{continuous random variable}, is a function whose value at any given sample (or point) in the sample space (the set of possible values taken by the random variable) can be interpreted as providing a relative likelihood that the value of the random variable would be close to that sample.
+A probability density function (PDF), or density of a \textbf{continuous random variable}, is a function whose value at any given sample (or point) in the sample space (the set of possible values taken by the random variable) can be interpreted as providing a relative likelihood that the value of the random variable would be close to that sample.
 
 Density functions require switching from exact outcomes (such as for discrete variables) to approximations or interval ranges for an infinite set of values within the probability interval (in a continuous interval, the values of the variable are so small to be practically uncountable).
 
@@ -1424,8 +1424,7 @@ $\displaystyle Pr[a\leq X\leq b]=\int _{a}^{b}f_{X}(x)dx$
 
 with:
 \begin{itemize}
-    \item $P(x=c)=0$
-    
+    \item $P(x=c)=0$ (the probability $P$ of $x$ to be equal to a constant $c$ is zero).
 \end{itemize}
 
 More technically, in a continuous distribution (e.g. continuous uniform, normal, and others), the probability is calculated by integration, as an area under the probability density function.
@@ -1453,8 +1452,8 @@ There are many kinds of probability density functions (actually more than 100, g
 \textbf{Continuous Uniform Distribution} \\
 In probability theory and statistics, the continuous uniform distribution or rectangular distribution is a family of symmetric probability distributions. The distribution describes an experiment where there is an arbitrary outcome that lies between certain bounds. 
 
-The bounds are defined by the parameters, a and b, which are the minimum and maximum values. The interval can either be closed (ex. [a, b]) or open (ex. (a, b)).
-Therefore, the distribution is often abbreviated U (a, b), where U stands for uniform distribution.
+The bounds are defined by the parameters, $a$ and $b$, which are the minimum and maximum values. The interval can either be closed (ex. [$a$, $b$]) or open (ex. ($a$, $b$)).
+Therefore, the distribution is often abbreviated $U (a, b)$, where $U$ stands for uniform distribution.
 
 \includegraphics[width=3cm, height=3cm]{cud}
 
@@ -1473,14 +1472,14 @@ Therefore, the distribution is often abbreviated U (a, b), where U stands for un
 \end{itemize}
 
 \subsection{Cumulative Distribution Functions (CDF)}
-The cumulative distribution function (CDF) is the probability that the variable takes a value less than or equal to x. 
+The cumulative distribution function (CDF) is the probability that the variable $X$ takes a value less than or equal to $x$. 
 
 $F(x) = P(X \leq x)$, $\forall x \in \mathbb{R}$  
 
 CDF expresses the cumulative probability of a given event.
 
 \textbf{Discrete Cumulative Distribution Function} \\
-A CDF in a discrete set.
+A cumulative distribution function in a discrete set.
 
 As an example, rolling a standard dice:
 \begin{itemize}
@@ -1492,15 +1491,16 @@ As an example, rolling a standard dice:
 \includegraphics[width=3cm, height=3cm]{discrete_cdf}
 
 \textbf{Continuous Cumulative Distribution Function} \\
-The cumulative distribution function, CDF, or cumulant is a function derived from the probability density function for a continuous random variable. It gives the probability of finding the random variable at a value less than or equal to a given cutoff. Many questions and computations about probability distribution functions are convenient to rephrase or perform in terms of CDFs, ex. computing the PDF of a function of a random variable.
+The cumulative distribution function, CDF, or cumulant, is a function derived from the probability density function for a continuous random variable. It gives the probability of finding the random variable at a value less than or equal to a given cutoff. Many questions and computations about probability distribution functions are convenient to rephrase or perform in terms of CDFs, ex. computing the PDF of a function of a random variable.
 
 \includegraphics[width=3cm, height=3cm]{continuos_cdf}
 
 \subsection{Binomial Distribution}
 Binomial distribution expresses the discrete probability distribution of an experiment that is repeated multiple times, having only two possible outcomes: positive or negative. 
+
 Binomial refers to the distribution having only two possible outcomes, positive or negative. 
 
-Binomial distribution is expressed as $B(n,p)$, with n being trials and p being the probability of success. 
+Binomial distribution is expressed as $B(n,p)$, with $n$ being trials and $p$ being the probability of success. 
 
 $ \displaystyle f(k,n,p)=\Pr(k;n,p)=\Pr(X=k)={\binom {n}{k}}p^{k}(1-p)^{n-k}$
 
@@ -1512,8 +1512,8 @@ Binomial distribution should respect the following criteria:
 \begin{itemize}
     \item Outcome is binomial (positive or negative, 1 or 0, + or - etc.).
     \item Each event is independent.
-    \item The number of trials n is fixed.
-    \item Success \textbackslash failure rate p is constant.
+    \item The number of trials $n$ is fixed.
+    \item Success \textbackslash failure rate $p$ is constant.
 \end{itemize}
 
 \paragraph{Binomial Distribution Overview}\mbox{} \\
@@ -1538,12 +1538,13 @@ Binomial distribution should respect the following criteria:
 \textbf{Example of a binomial distribution:} \\
 
 According to a report, 80\% of prospects at company $\alpha$ will result in a signed contract. Each prospect is independent of each other.
+
 It's asked to calculate the probability to close a deal from a round of 3 prospects they are working on.
 
 Hence:
 \begin{itemize}
     \item $n$ = Number of trials = 3
-    \item Number of outcomes = binary positive \textbackslash negative (contract or no contract).
+    \item Number of outcomes = binary (positive or negative) (contract or no contract).
     \item $p$ = Probability of success = 0.8
     \item Trials are independent = yes.
     \item $k$ = Target result = 1 contract closed = 1
@@ -1560,16 +1561,18 @@ Calculating then the values for each value of $k \in n$, hence $P\binom {n}{k}$ 
 
 \subsection{Bernoulli Distribution}
 The Bernoulli distribution is the discrete probability distribution of a random variable which takes the value 1 with probability $p$ and the value 0 with probability $q = 1 - p$. 
+
 Less formally, it can be thought of as a model for the set of possible outcomes of any single experiment that asks a yes-no (boolean) question. 
+
 Such questions lead to outcomes that are boolean-valued: a single bit whose value is success, yes, true, 1 with probability $p$ and failure, no, false, 0 with probability $q = 1 - p$. 
 
 Bernoulli distribution can be see as a specific case of binomial distribution, where:
 \begin{itemize}
-    \item Binomial distribution: $n$ trials
+    \item Binomial distribution: $n$ trials.
     \item Bernoulli distribution: one trial.
 \end{itemize}
 
-It can be used to represent a (possibly biased) coin toss where 1 and 0 would represent "heads" and "tails", respectively, and $p$ would be the probability of the coin landing on heads (or vice versa where 1 would represent tails and $p$ would be the probability of tails). In particular, unfair coins would have $p \neq  1/2 $
+It can be used to represent a (possibly biased) coin toss where 1 and 0 would represent “heads” and “tails”, respectively, and $p$ would be the probability of the coin landing on heads (or vice versa where 1 would represent tails and $p$ would be the probability of tails). In particular, unfair coins would have $p \neq  1/2 $
 
 \paragraph{Bernouilli Distribution Overview}\mbox{} \\
 
@@ -1598,9 +1601,9 @@ $ \displaystyle f(k;\lambda )=\Pr(X{=}k)={\frac {\lambda ^{k}e^{-\lambda }}{k!}}
 
 where:
 \begin{itemize}
-    \item k is the number of occurrences ($…k=0,1,2,\ldots) $.
-    \item e is Euler's number ($ e=2.71828\ldots$).
-    \item ! is the factorial function.
+    \item $k$ is the number of occurrences ($…k=0,1,2,\ldots) $.
+    \item $e$ is Euler's number ($ e=2.71828\ldots$).
+    \item $!$ is the factorial function.
 \end{itemize}
 
 Poisson distribution should respect the following criteria:
@@ -1619,14 +1622,16 @@ Some examples of Poisson distribution are:
     \item The number of planes that fly over a specific house in an hour.
 \end{itemize}
 
-One of the first applications of Poisson distribution was the investigation of deaths by horse kick in soldiers in 1800. Researchers were interested in inferring the deaths by horse kick in a year.
+One of the first applications of Poisson distribution was the investigation of deaths by horse kick in soldiers in 1800. 
+
+Researchers were interested in inferring the deaths by horse kick in a year.
 \begin{itemize}
     \item Event = death by kick
     \item Time interval = 1 year
     \item $\lambda$ = 0.61
 \end{itemize}
 
-The number of times an event is investigated is $k$ and is assumed to be $k = 2$ (we want to calculate the probability that in a year 2 soldiers will die from a horse kick).
+The number of time an event is investigated is $k$ and is assumed to be $k = 2$ (we want to calculate the probability that in a year 2 soldiers will die from a horse kick).
 
 Hence: 
 
@@ -1655,6 +1660,14 @@ The general form of its probability density function is:
 
 $\displaystyle f(x)={\frac {1}{\sigma {\sqrt {2\pi }}}}e^{-{\frac {1}{2}}\left({\frac {x-\mu }{\sigma }}\right)^{2}}$
 
+where:
+\begin{itemize}
+    \item $\sigma$ is the standard deviation of the distribution.
+    \item $\pi$ is the mathematical constant (3.14159...).
+    \item $e$ is Euler's number ($ e=2.71828\ldots$).
+    \item $\mu$ is the mean of the distribution.
+\end{itemize}
+
 A random variable with a Gaussian distribution is said to be normally distributed and is called a normal deviate
 
 Normal distribution is one of the most common distribution used in business, statistics, biology, etc., since so many real-life datasets end up resembling a normal distribution (see also: Central Limit Theorem).
@@ -1680,7 +1693,9 @@ In particular, it can be stated that:
 \end{itemize}
 
 \subsection{Z-Score}
-Z-score (even called standard score) is the number of standard deviations by which the value of an observed value or data point is above or below the mean of the distribution. Less technically, z-scores represents how a given data point is far from the mean.
+Z-score (also known as standard score) is the number of standard deviations by which the value of an observed value or data point is above or below the mean of the distribution. 
+
+Less technically, z-scores represents how a given data point is far from the mean.
 
 Negative z-scores fall on the left of the distribution (-4 being the further) while positive z-scores fall on the right of the distribution (+4 being the further).
 
@@ -1693,7 +1708,13 @@ $\displaystyle Z={\frac {X-\mu }{\sigma }}$
 \subsubsection{Z-Tables}
 A z-table, or standard normal table, reveals what percentage of values fall below a certain z-score in a normal distribution. It allows to translate specifics z-scores to their statistic relevance in a normal distribution.
 
-The table has z decimal values on the row header, and hundredth values on the table header. First turn your data into a normal distribution. Then find the matching z-score to the left of the table and align it with the z-score at the top of the table. The result gives you the probability. 
+The table has z decimal values on the row header, and hundredth values on the table header. 
+To extrapolate data from z-table:
+\begin{itemize}
+    \item Turn data into a normal distribution.
+    \item Find the matching z-score to the left of the table and align it with the z-score at the top of the table.
+    \item The result gives you the probability. 
+\end{itemize}
 
 The image below shows the probability for a z-score of 1.2 + 0.5 = 1.25, that is 0.89435.
 
@@ -1730,10 +1751,14 @@ Skewness is a measure of the asymmetry of the probability distribution of a rand
 Would be useful to remember that for a symmetric distribution, and, specifically, for a normal distribution, median = mean = mode.
 
 \textbf{Negative Skew} \\
-The left tail is longer; the mass of the distribution is concentrated on the right of the figure. The distribution is said to be left-skewed, left-tailed, or skewed to the left, despite the fact that the curve itself appears to be skewed or leaning to the right; left instead refers to the left tail being drawn out and, often, the mean being skewed to the left of a typical center of the data. A left-skewed distribution usually appears as a right-leaning curve.
+The left tail is longer; the mass of the distribution is concentrated on the right of the figure. 
+
+The distribution is said to be left-skewed, left-tailed, or skewed to the left, despite the fact that the curve itself appears to be skewed or leaning to the right; left instead refers to the left tail being drawn out and, often, the mean being skewed to the left of a typical center of the data. A left-skewed distribution usually appears as a right-leaning curve.
 
 \textbf{Positive Skew} \\
-The right tail is longer; the mass of the distribution is concentrated on the left of the figure. The distribution is said to be right-skewed, right-tailed, or skewed to the right, despite the fact that the curve itself appears to be skewed or leaning to the left; right instead refers to the right tail being drawn out and, often, the mean being skewed to the right of a typical center of the data. A right-skewed distribution usually appears as a left-leaning curve
+The right tail is longer; the mass of the distribution is concentrated on the left of the figure. 
+
+The distribution is said to be right-skewed, right-tailed, or skewed to the right, despite the fact that the curve itself appears to be skewed or leaning to the left; right instead refers to the right tail being drawn out and, often, the mean being skewed to the right of a typical center of the data. A right-skewed distribution usually appears as a left-leaning curve
 
 \includegraphics[width=5cm, height=5cm]{skew}
 
@@ -1799,7 +1824,7 @@ After the population is divided into clusters, then a SRS is performed on each c
 It’s a sampling method often used in marketing research.
 
 \subsection{Central Limit Theorem}
-In probability theory, the central limit theorem (CLT) establishes that, in many situations, when independent random variables are summed up, their properly normalized sum tends toward a normal distribution around the mean of the original dataset even if the original variables themselves are not normally distributed.
+The central limit theorem (CLT) establishes that, in many situations, when independent random variables are summed up, their properly normalized sum tends toward a normal distribution around the mean of the original dataset even if the original variables themselves are not normally distributed.
 
 It implies that probabilistic and statistical methods that work for normal distributions can be applicable to many problems involving other types of distributions.
 
@@ -1811,14 +1836,14 @@ The CLT establishes a relationship between the data from the whole population (p
     \item The shape of the distribution of sample means tends to be normal. It is guaranteed to be normal if either: 
     \begin{itemize}
         \item The population from which the samples are obtained is normal.
-        \item The sample size is n = 30 or more.
+        \item The sample size ($n$) is $n \geq 30$.
     \end{itemize}  
 \end{itemize}
 
 \subsubsection{Sampling Distribution of the Sample Mean}
-The distribution of sample means is defined as the set of means from all the possible random samples of a specific size (n) selected from a specific population. 
+The distribution of sample means is defined as the set of means from all the possible random samples of a specific size ($n$) selected from a specific population. 
 
-If repeated random samples of a given size n are taken from a population of values for a quantitative variable, the mean of all sample means is population mean.
+If repeated random samples of a given size $n$ are taken from a population of values for a quantitative variable, the mean of all sample means is population mean.
 
 $\bar{x} = \mu $
 
@@ -1887,7 +1912,6 @@ The T-distribution (and those associated T-score values) is used in hypothesis t
 Values of T-score have to be compared on a T-table\footnote{https://www.sjsu.edu/faculty/gerstman/StatPrimer/t-table.pdf} with a process similar to the Z-scores.
 
 \paragraph{When to use Z-distribution and when T-distribution?}\mbox{} \\
-\mbox{} \\
 \begin{itemize}
     \item If sample < 30, t-distribution will provide a more accurate value.
     \item If sample > 30, z-distribution will provide a more accurate one.
@@ -1903,7 +1927,7 @@ Values of T-score have to be compared on a T-table\footnote{https://www.sjsu.edu
 \end{itemize} 
 
 \subsubsection{Point Estimation}
-Point estimation involves the use of sample data to calculate a single value (called point estimate since it identifies a point in some parameter space) which is to serve as a "best guess" or "best estimate" of an unknown population parameter (for example, the population mean). 
+Point estimation involves the use of sample data to calculate a single value (called point estimate since it identifies a point in some parameter space) which is to serve as a “best guess” or “best estimate” of an unknown population parameter (for example, the population mean). 
 
 More informally, point estimation is the process of finding an appropriate value of a population parameter, such as the mean of the population, from random samples of the population.
 
@@ -1935,7 +1959,7 @@ where:
     \item $MOE$ = $z_y SE$ = $z_y \frac{\sigma}{\sqrt{n}}$ is the Standard Error, $z_y$ being the quantile or z-score.
 \end{itemize}
 
-If standard deviation is not known, then we need to use a t-score instead of a t-score.
+If standard deviation is not known, then we need to use a t-score instead of a z-score.
 
 \subsubsection{Confidence Level (CL)}
 The confidence level measures the level of trust\footnote{a note for Italian readers: “Confidence” translates to “Fiducia” and not to “Confidenza” as we’re used to say} of the accuracy of the provided interval. 
@@ -2001,7 +2025,7 @@ The process of testing an hypothesis is the following:
     \item State the conclusion.
 \end{itemize}
 
-\subsection{Null \& Alternative Hypothesis}
+\subsection{Null \& Alternative Hypotheses}
 \textbf{Null hypothesis (H0)} states that no difference or relationship exists between two sets of data or variables being analyzed. 
 
 \textbf{Alternative hypothesis (H1, Ha)} states that there exists a relationship between two sets of data or variables being analyzed. 
@@ -2010,9 +2034,13 @@ The two hypotheses are tested together.
 
 \subsubsection{Type I and Type II Errors}
 \textbf{Type I error} is a false positive conclusion (rejecting an actually true null hypothesis). 
-Type I error is equal to the $\alpha$ probability (the percentage falling outside the level of significance). These errors mean that the results are assumed to be statistically significant while they are actually not.
 
-\textbf{Type II error} is a false negative conclusion (accepting an actually false null hypothesis). This has not to be mixed with accepting the null hypothesis. It may happens whenever the analysis has not enough statistical power to detect an effect of such a size. 
+Type I error is equal to the $\alpha$ probability (the percentage falling outside the level of significance). 
+These errors mean that the results are assumed to be statistically significant while they are actually not.
+
+\textbf{Type II error} is a false negative conclusion (accepting an actually false null hypothesis). 
+This has not to be mixed with accepting the null hypothesis. 
+It may happens whenever the analysis has not enough statistical power to detect an effect of such a size. 
 
 Statistical power is determined by:
 \begin{itemize}
@@ -2095,7 +2123,8 @@ If the estimated value exists in the critical areas, the alternative hypothesis 
 
 Noting that in a two-tailed test the range of rejection is equal to $\alpha/2$  (both sides of the distribution, right and left), more extreme values are needed in order to incur in a rejection of the null hypothesis. Hence, two-tailed tests are more conservative, and one should assumes to have strong evidence to state a specific direction in the hypothesis testing.
 
-\textbf{One-tailed test} is used whenever the estimated value can differ from the reference value only in one direction, greater or smaller. But not both. For example, the defective rate of a machine. 
+\textbf{One-tailed test} is used whenever the estimated value can differ from the reference value only in one direction, greater or smaller. But not both. 
+For example, the defective rate of a machine. 
 If the estimated value exists in one of the one-sided critical areas, depending on the direction of interest, the alternative hypothesis is accepted over the null hypothesis. 
 
 Range of rejection is equal to $\alpha$ (one side of the distribution, right or left).
@@ -2106,7 +2135,7 @@ The same result is then obtained following different approaches.
 
 The test process will follow this roadmap:
 \begin{itemize}
-    \item State Null ($H0$) and Alternate ($Ha$) hypothesis.
+    \item State Null ($H0$) and Alternate ($Ha$) hypotheses.
     \item Choose LOS (level of significance, $\alpha$).
     \item Calculate test statistics from the sample.
 \end{itemize}
@@ -2114,8 +2143,8 @@ The test process will follow this roadmap:
 Then, for \textbf{p-value} approach:
 \begin{itemize}
     \item Compute $p$-value.
-    \item Compare $p$-value to alpha level.
-    \item Reject null if $p \leq alpha$ level.
+    \item Compare $p$-value to $\alpha$ level.
+    \item Reject null if $p \leq \alpha$ level.
 \end{itemize}
 
 And for \textbf{Critical Value} approach:
@@ -2131,6 +2160,7 @@ And for \textbf{Critical Value} approach:
 For the $p$-value approach, the likelihood ($p$-value) of the numerical value of the test statistic is compared to the specified significance level $\alpha$ of the hypothesis test.
 
 The $p$-value corresponds to the probability of observing sample data at least as extreme as the actually obtained test statistic. This means measure the statistical significance of the observations. 
+
 Small $p$-values provide evidence against the null hypothesis. The smaller (closer to 0) the $p$-value, the stronger is the evidence against the null hypothesis.\footnote{Hartmann, K., Krois, J., Waske, B. (2018): E-Learning Project SOGA: Statistics and Geospatial Data Analysis. Department of Earth Sciences, Freie Universitaet Berlin.}
 
 \textbf{Critical value: compare scores}\\
@@ -2167,7 +2197,7 @@ Common use-cases requiring A/B testing are\footnote{You may want to check this \
 \clearpage
 
 \section{Regression Analysis}
-Regression analysis is a set of statistical processes for estimating the relationships between a \textbf{dependent variable} (often called the 'outcome' or 'response' variable, or a 'label' in machine learning jargon) and one or more \textbf{independent variables} (often called 'predictors', 'covariates', 'explanatory variables' or 'features').
+Regression analysis is a set of statistical processes for estimating the relationships between a \textbf{dependent variable} (often called the “outcome” or “response” variable, or a “label” in machine learning jargon) and one or more \textbf{independent variables} (often called “predictors”, “covariates”, “explanatory variables” or “features”).
 
 Regression analysis is primarily used for two conceptually distinct purposes:
 \begin{itemize}
