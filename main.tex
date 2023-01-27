@@ -293,6 +293,10 @@ The estimated or predicted values in a regression or other predictive model in s
 
 $\hat{y}$: $y$ is the outcome or dependent variable in the model equation, the "hat" symbol ($\hat{}$) placed over the variable name is the statistical designation of an estimated value.
 
+\paragraph{Outliers}\mbox{} \\ 
+\mbox{} \\
+An outlier is a data point that differs significantly from other observations. 
+In regression analysis, outliers are the farther points from the regression line.
 
 \subsection{Descriptive and Inferential statistics}
 
@@ -2163,6 +2167,15 @@ The $p$-value corresponds to the probability of observing sample data at least a
 
 Small $p$-values provide evidence against the null hypothesis. The smaller (closer to 0) the $p$-value, the stronger is the evidence against the null hypothesis.\footnote{Hartmann, K., Krois, J., Waske, B. (2018): E-Learning Project SOGA: Statistics and Geospatial Data Analysis. Department of Earth Sciences, Freie Universitaet Berlin.}
 
+\textbf{Common errors regarding the use of $p$-value}:
+\begin{itemize}
+    \item The $p$-value is not the probability that the null hypothesis is true or the probability that the null hypothesis is false. It is not related to either.
+    \item The $p$-value is not the probability that an observation is a random event. The calculation of $p$-value is based on the assumption that every observation is a random event, a random result. The phrase "the result is due to random chance" usually means that the null hypothesis is probably correct, but remember that $p$-value cannot be used to represent the probability that a hypothesis is true.
+    \item The $p$-value is not the probability of rejecting the null hypothesis when it is true.
+    \item The $p$-value is not the probability that replicating the experiment would yield the same conclusion. To quantify the replicability of an experiment, the concept of $p$-rep was introduced.
+    \item The significance level α is not determined by the $p$-value. The significance level is decided by the person conducting the experiment before seeing the data.
+\end{itemize}
+
 \textbf{Critical value: compare scores}\\
 It is determined whether or not the observed test statistic is more extreme than a defined critical value. Therefore the observed test statistic (calculated on the basis of sample data) is compared to the critical value, some kind of cutoff value.
 \begin{itemize}
@@ -2201,16 +2214,17 @@ Regression analysis is a set of statistical processes for estimating the relatio
 
 Regression analysis is primarily used for two conceptually distinct purposes:
 \begin{itemize}
-    \item First, regression analysis is widely used for prediction and forecasting, where its use has substantial overlap with the field of machine learning.
-    \item Second, in some situations regression analysis can be used to infer causal relationships between the independent and dependent variables. Importantly, regressions by themselves only reveal relationships between a dependent variable and a collection of independent variables in a fixed dataset.
+    \item For prediction and forecasting, where its use has substantial overlap with the field of machine learning.
+    \item To infer causal relationships between the independent and dependent variables. Importantly, regressions by themselves only reveal relationships between a dependent variable and a collection of independent variables in a fixed dataset.
 \end{itemize}
 
-Linear regression line is on the form of
+Linear regression line is expressed as:
 
 $y = mx + b$
 
 where:
 \begin{itemize}
+    \item $y$ is the independent variable.
     \item $m$ is the slope.
     \item $x$ is the independent variable.
     \item $b$ is the intercept (the expected mean value of $y$ when all $x$=0, where the function crosses the x-axis).
@@ -2256,6 +2270,7 @@ Other methodologies are, in example:
     \item Quantile Regression.
     \item LAD (Least Absolute Deviation).
     \item GLS (Generalized Least Squares).
+    \item SGD (Stochastic Grandient Descent) (with some caveat for linear regression).
 \end{itemize}
 
 \subsection{Correlation Coefficient}
@@ -2336,9 +2351,6 @@ It could be:
     \item Strong: tightly clustered, minimal distance.
     \item Weak: sparse, mid-high distance from the trendline. 
 \end{itemize}
-
-\textbf{Outliers}: \\
-How many and how far far are the farther points from the regression line.
 
 \subsection{Regression model evaluation metrics}
 Regression analysis is just the first part of the evaluation process during a statistical analysis. Evaluating the model accuracy is a paramount step in order to appreciate the accuracy of our analysis, and how representative it is of the dataset examined.
@@ -2428,7 +2440,7 @@ Attribution 4.0 International (CC BY 4.0)\footnote{\url{https://creativecommons.
 
 This document is distributed under a Creative Common, Free Culture, License
 
-This work was created as a means of learning and diffusion for study purposes, so I hope for its free dissemination and dissemination.
+This work was created as a means of learning and diffusion for study purposes, so I hope for its free diffusion and dissemination.
 
 While producing it, I mainly observed a two-pronged approach:
 \begin{itemize}
@@ -2436,14 +2448,14 @@ While producing it, I mainly observed a two-pronged approach:
     \item Describe everything with proprietary wording that does not infringe upon the intellectual property of the sources I have drawn on.
 \end{itemize}
 
-For obvious reasons however, mathematical definitions are free up to a point (and one of the goals of this work was to refer back to the canonical definitions, as further detailed in the section on) so where in good faith I have traced the work of licensed material I am happy to take action to amend it. Again starting from the premise that the purpose of this paper is not commercial but rather informative and educational. See the \textbf{Contact} section for any needs.
+For obvious reasons however, mathematical definitions are free up to a point (and one of the goals of this work was to refer back to the canonical definitions, as further detailed in the following section) so where in good faith I have traced the work of licensed material I am happy to take action to amend it. Again starting from the premise that the purpose of this paper is not commercial but rather informative and educational. See the \textbf{Contact} section for any needs.
 
 This work was originally released by the Author as a free downloadable pdf. 
 
 \textbf{Machine-readable license metadata}:\\
-\href{<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">The Statistics Handbook</span> di<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName"> Carlo Occhiena</span> è distribuito con Licenza <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribuzione 4.0 Internazionale</a>}{This code will generate a dynamic metadata tag}.
-
-Because it is very long, it is deliberately omitted in the printed version of the handbook.
+\begin{sloppypar}
+\url{<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">The Statistics Handbook</span> di<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName"> Carlo Occhiena</span> è distribuito con Licenza <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribuzione 4.0 Internazionale</a>}.
+\end{sloppypar}
 
 \section{Source Code \& Additional Materials}
 The source of this handbook, and some additional materials can be found on an open repository on my GitHub, at the following link:
