@@ -9,6 +9,7 @@ _The statistics handbook open source repository_
 - datachart_template.ai: the .ai file with the charts and image source file.
 - main.tex: is the latex source code of the handbook.
 - z-table.xlsx: the z-table generated with an Excel formula.
+- z_score_table_t_score_analysis.ipynb: interactive Jupyter Notebook to explore t-score and z-score testing.
 
 ## Scope of this handbook
 _"Statistical analysis is the best way to predict events we do not know using information we do know."_
