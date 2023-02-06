@@ -2384,9 +2384,16 @@ R-Squared, also known as \textbf{coefficient of determination}, is a ratio, the 
 
 It's obtained as a ratio of the distance of the original points from the prediction values minus the distance of the original points from the dataset mean. 
 
-Coefficient of determination is a scale-free score, this mean that the value will always be within a range of 1 and 0.
+The capitalized $R^2$ notation suggests that it is referred to a multiple linear regression model (a model with more than one independent variable).
+
+If, on the other hand, a simple linear regression model has been constructed, i.e., with only one independent variable, $r^2$ is usually preferred.
+
+Coefficient of determination is a scale-free score, this mean that the value will always be within a range of 1 and 0\footnote{There are cases where $R^2$ can yield negative values. This can arise when the predictions that are being compared to the corresponding outcomes have not been derived from a model-fitting procedure using those data}. 
 
 $ \displaystyle R^2 = 1 - \frac{\sum(y_i - \hat{y})^2}{\sum(y_i - \bar{y})^2}$
+
+Usually, the higher the $R^2$ value (closer to 1), the higher the model has a predictive value. However, the significance of the $R^2$ ratio cannot be inferred by excluding the reference context. In some fields such as the behavioral sciences, it is usual to observe $R^2$ values of less than 50\%. This does not mean that the regression model is not performing accurately, but that, by its very nature, the dependent variable being analyzed depends on so many different factors, many of which have not been measured. 
+On the other hand, a high $R^2$ is a necessary but not sufficient condition for accurate predictions.
 
 \subsection{Chi-Square Test}
 Chi-square is among the most common nonparametric tests used in statistics.  
