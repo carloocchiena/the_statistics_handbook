@@ -33,3 +33,7 @@ Before releasing this publication, which is distributed under a Creative Common 
 Happy reading! 
 
 Carlo, 21st of February 2023.
+
+## Featured
+- [Positively voted on HackerNews](https://news.ycombinator.com/item?id=36111993) (103 upvotes, 21 comments) 
+- Popular Newsletter "La Cultura del Dato" by Stefano Gatti ([episode #54](https://stefanogatti.substack.com/p/laculturadeldato-053-a48))
