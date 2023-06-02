@@ -35,6 +35,6 @@ Happy reading!
 Carlo, 21st of February 2023.
 
 ## Featured
-- [Positively voted on HackerNews](https://news.ycombinator.com/item?id=36111993) (111 upvotes, 21 comments).
+- [Positively voted on HackerNews](https://news.ycombinator.com/item?id=36111993) (111 upvotes, 21 comments). Also made the "Buzzing on HN daily rank for that day".
 - Cited in the popular Newsletter "La Cultura del Dato" by Stefano Gatti ([episode #54](https://stefanogatti.substack.com/p/laculturadeldato-053-a48)).
 - LibHunt top 10 TeX project tagged "mathematics" ([url](https://www.libhunt.com/l/tex/topic/mathematics)).
