@@ -1,6 +1,16 @@
 # The Statistics Handbook
 _The statistics handbook open source repository_
 
+## Version
+Version 0.2 is out:
+- New images.
+- Formulas revisited.
+- Typo fixing and editing.
+- List of contributos update
+
+Thanks to all the proof-readers and contributor! 
+Can't believe this repo has more than 300 stars! 
+
 ## Contents of this repo
 - LICENSE: the license definition for this package.
 - README.md: the readme file.
