@@ -30,9 +30,9 @@
 
 % DOCUMENT CUSTOMIZATION
 \title{The Statistics Handbook \\ 
-    \normalsize Version 0.1}
+    \normalsize Version 0.2}
 \author{ Carlo Occhiena }
-\date{ Feb 2023 }
+\date{ Sep 2023 }
 
 
 \begin{document}
@@ -120,7 +120,7 @@ Discrete data are the possible value of rolling a dice: 1,2,3,4,5,6 and not 6.5 
 
 \textbf{Continuous} means there is an infinite amount of value in between each data point.
 
-Continuous data is the height or weight of a group of people.
+Continuous data is the height or weight of a group of people. \\
 Continuous data are temperature records. 
  
 \subsubsection{Nominal vs Ordinal}
@@ -466,7 +466,7 @@ A quartile is a type of quantile (quantiles are values that split sorted data or
 
 \textbf{Quartiles:}
 \begin{itemize}
-    \item Quartile zero (Q0) corresponds to the first value of the ordered dataset.
+    \item Quartile zero (Q0) corresponds to the first value of the ordered dataset. Usually it is not considered in the computation of quartiles.
     \item The first quartile (Q1) is defined as the middle number between the smallest number (minimum) and the median of the data set. It is also known as the lower or 25th empirical quartile, as 25\% of the data is below this point.
     \item The second quartile (Q2) is the median of a data set; thus 50\% of the data lies below this point.
     \item The third quartile (Q3) is the middle value between the median and the highest value (maximum) of the data set. It is known as the upper or 75th empirical quartile, as 75\% of the data lies below this point.
@@ -815,13 +815,13 @@ However, in no sense does the future event “compensate for” or “even out�
 \subsubsection{Probability Addition Rule}
 If A and B are two events in a probability experiment, then the probability that either one of the events will occur is: \\ 
 \mbox{} \\
-P(A or B) = P(A)+P(B) − P(A and B) \\ 
+P(A or B) = P(A)+P(B) - P(A and B) \\ 
 \mbox{} \\
 Or, with sets notation as: \\ 
 \mbox{} \\
-$P(A \cup B) = P(A)+P(B)−P(A \cap B)$ 
+$P(A \cup B) = P(A)+P(B) - P(A \cap B)$ 
 
-\includegraphics[width=3.5cm, height=3cm]{intersection}
+\includegraphics[width=3.5cm, height=3cm]{union}
 
 If A and B are two mutually exclusive events, \\ 
 $P(A \cap B) = 0$. Then the probability that either one of the events will occur is: \\
@@ -1062,7 +1062,7 @@ Dataset & Shifted, K\\ \hline
 &\\[-1em]
 Mean: 6 & Mean: 6 + K \\ \hline
 &\\[-1em]
-Median:  & Median: 3 + K \\ \hline
+Median: 3 & Median: 3 + K \\ \hline
 &\\[-1em]
 Mode: 3 & Mode: 3 + K  \\ \hline
 &\\[-1em]
@@ -2607,6 +2607,14 @@ Other relevant sources are:
 This work was inspired by all the people who taught me love for studying and sciences. I was welcomed into their circles without prejudice, although I often came across as an ant in their presence.
 
 To all of them goes my deepest gratitude and appreciation! 
+
+\subsection{Proof-readers}
+\begin{itemize}
+    \item Eng. M. Rezzaro
+    \item Braccinocorto (GitHub contributor)
+    \item Hongy19 (GitHub contributor)
+\end{itemize}
+
 
 \section{Contacts}
 \begin{itemize}
