@@ -3,10 +3,10 @@ _The statistics handbook open source repository_
 
 ## Version
 Version 0.2 is out:
-- New images.
-- Formulas revisited.
-- Typo fixing and editing.
-- List of contributos update
+- Revisited images.
+- Update of some explanations and formulas.
+- Typo fixing and general editing of doc layout.
+- Updated list of contributors.
 
 Thanks to all the proof-readers and contributor! 
 Can't believe this repo has more than 300 stars! 
