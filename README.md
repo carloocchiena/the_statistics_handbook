@@ -9,7 +9,7 @@ Version 0.2 is out:
 - Updated list of contributors.
 
 Thanks to all the proof-readers and contributor! 
-Can't believe this repo has more than 300 stars! 
+Can't believe this repo has more than 200 stars! 
 
 ## Contents of this repo
 - LICENSE: the license definition for this package.
