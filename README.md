@@ -1,7 +1,7 @@
 # The Statistics Handbook
 _The statistics handbook open source repository_
 
-# Give me the PDF and just leave me alone
+### Give me the PDF and just leave me alone
 Ok, fine: click [here](https://github.com/carloocchiena/the_statistics_handbook/blob/main/The%20Statistics%20Handbook_COcchiena_main.pdf) (it's just the link from the above repo) 
 
 ## Version
