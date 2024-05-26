@@ -8,7 +8,7 @@ Version 0.2 is out:
 - Typo fixing and general editing of doc layout.
 - Updated list of contributors.
 
-Thanks to all the proof-readers and contributor! 
+Thanks to all the proof-readers and contributors! 
 Can't believe this repo has more than 200 stars! 
 
 ## Contents of this repo
@@ -42,7 +42,8 @@ Before releasing this publication, which is distributed under a Creative Common 
 
 Happy reading! 
 
-Carlo, 21st of February 2023.
+Carlo, 26th of May 2024.
+<%today%>
 
 ## Featured
 - [Positively voted on HackerNews](https://news.ycombinator.com/item?id=36111993) (111 upvotes, 21 comments). Also made the "Buzzing on HN daily rank" for that day.
