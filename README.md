@@ -43,7 +43,6 @@ Before releasing this publication, which is distributed under a Creative Common 
 Happy reading! 
 
 Carlo, 26th of May 2024.
-%%current_date_yyyymmdd%%
 
 ## Featured
 - [Positively voted on HackerNews](https://news.ycombinator.com/item?id=36111993) (111 upvotes, 21 comments). Also made the "Buzzing on HN daily rank" for that day.
