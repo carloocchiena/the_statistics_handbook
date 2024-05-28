@@ -15,14 +15,14 @@ Thanks to all the proof-readers and contributors!
 Can't believe this repo has more than 200 stars! 
 
 ## Contents of this repo
-- LICENSE: the license definition for this package.
-- README.md: the readme file.
-- The Statistics Handbook: the compiled version of the handbook.
-- Statistical Workbook.xlsx: the .xlsx file with exercises and demonstrations.
-- datachart_template.ai: the .ai file with the charts and image source file.
-- main.tex: is the latex source code of the handbook.
-- z-table.xlsx: the z-table generated with an Excel formula.
-- z_score_table_t_score_analysis.ipynb: interactive Jupyter Notebook to explore t-score and z-score testing.
+- **LICENSE:** the license definition for this package.
+- **README.md:** the readme file.
+- **The Statistics Handbook:** the compiled version of the handbook.
+- **Statistical Workbook.xlsx:** the .xlsx file with exercises and demonstrations.
+- **datachart_template.ai:** the .ai file with the charts and image source file.
+- **main.tex:** is the latex source code of the handbook.
+- **z-table.xlsx:** the z-table generated with an Excel formula.
+- **z_score_table_t_score_analysis.ipynb:** interactive Jupyter Notebook to explore t-score and z-score testing.
 
 ## Scope of this handbook
 _"Statistical analysis is the best way to predict events we do not know using information we do know."_
