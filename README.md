@@ -5,7 +5,7 @@ _The statistics handbook open source repository_
 Ok, fine: click [here](https://github.com/carloocchiena/the_statistics_handbook/blob/main/The%20Statistics%20Handbook_COcchiena_main.pdf) (it's just the link from the above repo). 
 
 ## Version
-Version 0.2 is out:
+Version 0.3 is out:
 - Revisited images.
 - Update of some explanations and formulas.
 - Typo fixing and general editing of doc layout.
