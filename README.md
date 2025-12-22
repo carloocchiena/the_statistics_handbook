@@ -45,9 +45,10 @@ Before releasing this publication, which is distributed under a Creative Common 
 
 Happy reading! 
 
-Carlo, 26th of May 2024.
+Carlo, 22nd of December 2025.
 
 ## Featured
 - [Positively voted on HackerNews](https://news.ycombinator.com/item?id=36111993) (111 upvotes, 21 comments). Also made the "Buzzing on HN daily rank" for that day.
 - Cited in the popular Newsletter "La Cultura del Dato" by Stefano Gatti, and "most readed" article for that week ([episode #54](https://stefanogatti.substack.com/p/laculturadeldato-053-a48)).
 - LibHunt top 10 TeX project tagged "mathematics" ([url](https://www.libhunt.com/l/tex/topic/mathematics)).
+- Cited in PavelGrigoryevDS' "Awesome-data-analysis" [Resources] (https://github.com/PavelGrigoryevDS/awesome-data-analysis)
