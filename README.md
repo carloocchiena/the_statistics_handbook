@@ -1,6 +1,8 @@
 # The Statistics Handbook
 _The statistics handbook open source repository_
 
+2026 update: this handbook was conceived, created, written, and edited entirely without the use of AI, starting in 2023. Is that a good thing? I don't know. But it's a fact :) 
+
 ### Just give me the PDF and leave me alone
 Ok, fine: click [here](https://github.com/carloocchiena/the_statistics_handbook/blob/main/The%20Statistics%20Handbook_COcchiena_main.pdf) (it's just the link from the above repo). 
 
